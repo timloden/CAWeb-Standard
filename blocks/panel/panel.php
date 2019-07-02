@@ -51,3 +51,14 @@ $show_icon = get_field('show_icon');
 	    </div>
 	</div>
 </div>
+
+
+	<?php if (is_admin()) : ?>
+	<style>
+		.panel {
+			font-family: "Source Sans Pro", sans-serif;
+		}
+
+	</style>
+
+	<?php endif; ?>

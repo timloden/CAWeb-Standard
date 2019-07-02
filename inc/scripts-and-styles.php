@@ -87,6 +87,8 @@ function add_block_editor_assets(){
 
 	wp_enqueue_style( 'caweb-standard', get_stylesheet_uri(), [], '0.0.0' );
 
+	wp_enqueue_style( 'block-editor', get_template_directory_uri() . '/blocks/block-editor.css', [], '0.0.0', 'all' );
+
 	if ($color_scheme) {
 		wp_enqueue_style( $color_scheme . '-theme', get_template_directory_uri() . '/color-schemes/colorscheme-' . $color_scheme . '.min.css', [], '5.0.6', 'all' );
 	} else {

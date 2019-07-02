@@ -76,3 +76,20 @@ function caweb_scripts() {
 	endif;
 
 }
+
+/* Gutenburg Scripts -----------------------------------------------------------------------------------*/
+
+add_action('enqueue_block_editor_assets','add_block_editor_assets',10,0);
+
+function add_block_editor_assets(){
+	$general_settings = get_field('general_settings', 'option');
+	$color_scheme = $general_settings['color_scheme'];
+
+	wp_enqueue_style( 'caweb-standard', get_stylesheet_uri(), [], '0.0.0' );
+
+	if ($color_scheme) {
+		wp_enqueue_style( $color_scheme . '-theme', get_template_directory_uri() . '/color-schemes/colorscheme-' . $color_scheme . '.min.css', [], '5.0.6', 'all' );
+	} else {
+		wp_enqueue_style( 'oceanside-theme', get_template_directory_uri() . '/color-schemes/colorscheme-oceanside.min.css', [], '5.0.6', 'all' );
+	}
+}

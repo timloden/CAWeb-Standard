@@ -54,12 +54,15 @@ if ( ! function_exists( 'caweb_standard_setup' ) ) :
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Add support for editor styles.
+        add_theme_support( 'editor-styles' );
 	}
 endif;
 
-
 /* Register sidebar
 --------------------------------------------------------------------------------------*/
+add_action( 'widgets_init', 'caweb_standard_widgets_init' );
 
 function caweb_standard_widgets_init() {
 	register_sidebar( array(
@@ -72,7 +75,6 @@ function caweb_standard_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'caweb_standard_widgets_init' );
 
 
 /* Autoload function files

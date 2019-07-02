@@ -31,13 +31,15 @@ $panel_design = get_field('panel_design');
 $show_button = get_field('show_button');
 $button_text = get_field('button_text');
 $button_link = get_field('button_link');
+$show_icon = get_field('show_icon');
+
 ?>
 
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?>">
 	<div class="panel panel-<?php echo esc_attr($panel_design); ?>">
 	    <div class="panel-heading">
 	    	<?php if ($panel_design === 'standout highlight') : ?><span class="triangle"></span><?php endif; ?>
-	        <h2><?php echo esc_attr($panel_title); ?></h2>
+	        <h2><?php if ($show_icon) : ?><span class="ca-gov-icon-info"></span> <?php endif; echo esc_attr($panel_title); ?></h2>
 	        <?php if ($show_button) : ?>
 	         <div class="options">
 	            <a href="<?php echo esc_attr($button_link); ?>" class="btn btn-default"><?php echo esc_attr($button_text); ?></a>

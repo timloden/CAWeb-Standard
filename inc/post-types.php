@@ -25,6 +25,7 @@ function courses_post_type() {
 	$args = array(
 		'labels'             => $labels,
 		'public'             => true,
+		'show_in_rest'       => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
@@ -65,6 +66,7 @@ function events_post_type() {
 	$args = array(
 		'labels'             => $labels,
 		'public'             => true,
+		'show_in_rest'       => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
@@ -105,6 +107,7 @@ function jobs_post_type() {
 	$args = array(
 		'labels'             => $labels,
 		'public'             => true,
+		'show_in_rest'       => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,
@@ -145,6 +148,7 @@ function publications_post_type() {
 	$args = array(
 		'labels'             => $labels,
 		'public'             => true,
+		'show_in_rest'       => true,
 		'publicly_queryable' => true,
 		'show_ui'            => true,
 		'show_in_menu'       => true,

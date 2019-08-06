@@ -4034,7 +4034,7 @@ a.label-dark:focus,a.label-dark.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem r
 .et-db #et-boc button.et_pb_button{text-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;background-color:transparent !important;white-space:inherit}
 .et-db #et-boc button.et_pb_button:after{width:auto;left:auto;top:auto;background-color:transparent}
 .et-db #et-boc button.et_pb_button:hover{background-color:rgba(0,0,0,0.05) !important}
-.et-db #et-boc a.et_pb_button{padding-bottom:.3em}
+.et-db #et-boc a.et_pb_button{padding-bottom:.3em;background-image:none !important}
 .et-db #et-boc .et_pb_button:before{content:''}
 .et-db #et-boc .et_pb_contact p input{height:auto}
 .et-db #et-boc .et_pb_contact p input[type=text]{width:100%}

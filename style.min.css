@@ -3821,7 +3821,7 @@ a.label-dark:focus,a.label-dark.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem r
 .et-db #et-boc .comment-content *{letter-spacing:inherit}
 .et-db #et-boc .et_pb_newsletter_description *{letter-spacing:inherit}
 .et-db #et-boc .et_pb_newsletter_button_text{letter-spacing:inherit}
-.et-db #et-boc .et_pb_image img{width:inherit}
+.et-db #et-boc .et_pb_image img{width:inherit;max-width:100%}
 .et-db #et-boc .et_pb_image a{line-height:0;padding-bottom:0}
 .et-db #et-boc .et_pb_newsletter_description{letter-spacing:inherit}
 .et-db #et-boc .et_pb_newsletter_form p input{background-color:#fff !important;width:100% !important}

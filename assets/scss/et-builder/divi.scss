@@ -561,7 +561,8 @@
 }
 
 .et-db #et-boc .et_pb_image img {
-	width: inherit
+	width: inherit;
+	max-width: 100%;
 }
 
 .et-db #et-boc .et_pb_image a {

@@ -3806,7 +3806,7 @@ a.label-dark:focus,a.label-dark.focus{outline:0;-webkit-box-shadow:0 0 0 .2rem r
 .et-social-vimeo a.icon:before{content:'\e09c'}
 .et-social-rss a.icon:before{content:'\e09e'}
 .ai1ec-single-event:after{content:" ";display:table;clear:both}
-.et-db #et-boc .clearfix{clear:none;display:initial}
+.et-db #et-boc .clearfix{clear:none}
 .et-db #et-boc .et_pb_module ol,.et-db #et-boc .et_pb_module ul,.et-db #et-boc ol.et_pb_module,.et-db #et-boc ul.et_pb_module{background:0}
 .et-db #et-boc .et_main_video_container *,.et-db #et-boc .et_pb_slide_video *,.et-db #et-boc .et_pb_video_box *{height:auto}
 .et-db #et-boc .et_main_video_container iframe,.et-db #et-boc .et_pb_slide_video iframe,.et-db #et-boc .et_pb_video_box iframe{height:100%}
@@ -6522,6 +6522,7 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 }@media(min-width:992px){.et-db #et-boc .et_pb_row{max-width:992px}
 }@media(min-width:1200px){.et-db #et-boc .et_pb_row{max-width:1200px}
 }.et-db #et-boc .et-fb-modules-list ul li .cacm_card:before{font-family:"CaGov" !important;content:"" !important}
+img{height:auto}
 .panel-heading .triangle{z-index:99}
 #wpadminbar #wp-admin-bar-site-name>.ab-item:before{content:"\e600";font-family:'CaGov' !important}
 a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,html,i,iframe,img,ins,kbd,label,legend,object,pre,q,s,samp,small,span,strike,strong,sub,sup,tt,u,var{margin:0;padding:0;border:0;outline:0;background:0}
@@ -6536,6 +6537,12 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 .clear-search{position:absolute;right:-45px;top:0;cursor:pointer;display:none;font-size:35px;background:0;border:0;padding:0}
 body.active-search .clear-search{display:block}
 body.active-search .search-results-header .clear-search{display:none}
+img.alignright{float:right;margin:0 0 1em 1em}
+img.alignleft{float:left;margin:0 1em 1em 0}
+img.aligncenter{display:block;margin-left:auto;margin-right:auto}
+.alignright{float:right}
+.alignleft{float:left}
+.aligncenter{display:block;margin-left:auto;margin-right:auto}
 .utility-header .settings-links{padding-left:0}
 .utility-header .located-city-name{margin-left:0}
 #google_translate_element.standard-translate{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;padding-left:0;text-align:right}

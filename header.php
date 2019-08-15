@@ -71,8 +71,11 @@ $share_email = get_field('share_via_email', 'option');
 
 $custom_css = get_field('custom_css', 'option');
 $custom_code = get_field('custom_javascript', 'option');
-?>
 
+?>
+<script>
+console.log(GetCookie(dismissed-notifications));
+</script>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -106,24 +109,27 @@ $custom_code = get_field('custom_javascript', 'option');
 </head>
 
 <body <?php body_class(); ?>>
-    <?php if(have_rows('alert_banners', 'options')) : ?>
-
-        <?php while( have_rows('alert_banners', 'option') ): the_row(); ?>
-            <?php
-            $display_on = get_sub_field('display_on');
-            if ($display_on == 'home_page' && is_front_page()) :
-                ?>
-                <?php get_template_part('template-parts/alert'); ?>
-            <?php elseif ($display_on == 'all_pages') : ?>
-                <?php get_template_part('template-parts/alert'); ?>
-            <?php endif; ?>
-
-        <?php endwhile; ?>
-
-    <?php endif; ?>
+    
 
     <header role="banner" id="header" class="global-header <?php if($use_sticky_nav) { echo('fixed'); } ;?>">
         <div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
+
+        <?php if(have_rows('alert_banners', 'options')) : ?>
+
+            <?php while( have_rows('alert_banners', 'option') ): the_row(); ?>
+                <?php
+                $display_on = get_sub_field('display_on');
+                $uniqueid = '#alert-' . get_row_index();
+                if ($display_on == 'home_page' && is_front_page()) :
+                    ?>
+                    <?php get_template_part('template-parts/alert'); ?>
+                <?php elseif ($display_on == 'all_pages') : ?>
+                    <?php get_template_part('template-parts/alert'); ?>
+                <?php endif; ?>
+
+            <?php endwhile; ?>
+
+        <?php endif; ?>
 
     <?php if ($geo_locator) : ?>
         <div class="location-settings section section-standout collapse collapsed " id="locationSettings">

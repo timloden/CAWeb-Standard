@@ -122,8 +122,7 @@ $custom_code = get_field('custom_javascript', 'option');
 
     <?php endif; ?>
 
-    <header role="banner" id="header" class="global-header <?php if($use_sticky_nav) { echo('fixed'); 
-} ;?>">
+    <header role="banner" id="header" class="global-header <?php if($use_sticky_nav) { echo('fixed'); } ;?>">
         <div id="skip-to-content"><a href="#main-content">Skip to Main Content</a></div>
 
     <?php if ($geo_locator) : ?>
@@ -148,12 +147,12 @@ $custom_code = get_field('custom_javascript', 'option');
                <div class="group flex-row">
                     <div class="social-media-links">
 
-                            <div class="header-cagov-logo">
-                                <a href="https://www.ca.gov"><span class="sr-only">CA.gov</span><img src="<?php echo esc_url(get_template_directory_uri());?>/assets/img/Ca-Gov-Logo-Gold.svg" class="pos-rel" alt="" aria-hidden="true"></a>
-                            </div>
+					<div class="header-cagov-logo">
+						<a href="https://www.ca.gov"><span class="sr-only">CA.gov</span><img src="<?php echo esc_url(get_template_directory_uri());?>/assets/img/Ca-Gov-Logo-Gold.svg" class="pos-rel" alt="CA.gov logo" aria-hidden="true"></a>
+					</div>
 
                     <?php if ($utility_home_link) : ?>
-                                <a href="/" class="ca-gov-icon-home"><span class="sr-only">Home</span></a>
+                        <a href="/" class="ca-gov-icon-home"><span class="sr-only">Home</span></a>
                     <?php endif; ?>
 
         <?php if ($facebook['url'] && $facebook['show_in_header'] == 1) : ?>
@@ -242,21 +241,20 @@ $custom_code = get_field('custom_javascript', 'option');
 
         <!-- Settings Bar -->
         <div class="site-settings section section-standout collapse collapsed" role="alert" id="siteSettings">
-            <div class="container  p-y">
-                <button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			<div class="container  p-y">
+				<div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
+					<div class="btn-group"><button type="button" class="btn btn-standout disableHighContrastMode">Default</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-standout enableHighContrastMode">High Contrast</button></div>
+				</div>
 
-                <div class="btn-group btn-group-justified-sm" role="group" aria-label="contrastMode">
-                    <div class="btn-group"><button type="button" class="btn btn-standout disableHighContrastMode">Default</button></div>
-                    <div class="btn-group"><button type="button" class="btn btn-standout enableHighContrastMode">High Contrast</button></div>
-                </div>
-
-                <div class="btn-group" role="group" aria-label="textSizeMode">
-                    <div class="btn-group"><button type="button" class="btn btn-standout resetTextSize">Reset</button></div>
-                    <div class="btn-group"><button type="button" class="btn btn-standout increaseTextSize"><span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <span class="sr-only">Increase</span><span class="ca-gov-icon-plus-line font-size-sm" aria-hidden="true"></span></span></button></div>
-                    <div class="btn-group"><button type="button" class="btn btn-standout decreaseTextSize"><span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <span class="sr-only">Decrease</span><span class="ca-gov-icon-minus-line font-size-sm" aria-hidden="true"></span></span></button></div>
-                </div>
-            </div>
-        </div>
+				<div class="btn-group" role="group" aria-label="textSizeMode">
+					<div class="btn-group"><button type="button" class="btn btn-standout resetTextSize">Reset</button></div>
+					<div class="btn-group"><button type="button" class="btn btn-standout increaseTextSize"><span class="hidden-xs">Increase Font Size</span><span class="visible-xs">Font <span class="sr-only">Increase</span><span class="ca-gov-icon-plus-line font-size-sm" aria-hidden="true"></span></span></button></div>
+					<div class="btn-group"><button type="button" class="btn btn-standout decreaseTextSize"><span class="hidden-xs">Decrease Font Size</span><span class="visible-xs">Font <span class="sr-only">Decrease</span><span class="ca-gov-icon-minus-line font-size-sm" aria-hidden="true"></span></span></button></div>
+				</div>
+				<button type="button" class="close" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			</div>
+		</div>
 
         <!-- Branding -->
           <div class="branding">
@@ -303,10 +301,10 @@ $custom_code = get_field('custom_javascript', 'option');
                     <div class="container">
                         <form id="Search" class="pos-rel" action="<?php echo site_url('serp');?>">
                             <span class="sr-only" id="SearchInput">Custom Google Search</span>
-                            <input type="text" id="q" name="q" aria-labelledby="SearchInput" placeholder="Custom Search" class="height-50 border-0 p-x-sm w-100" />
-                            <button type="submit" class="pos-abs gsc-search-button top-0 width-50 height-50 border-0 bg-transparent"><span class="ca-gov-icon-search font-size-30 color-gray" aria-hidden="true"></span><span class="sr-only">Submit</span></button>
-                            <div class="width-50 height-50 close-search-btn"><button class="close-search gsc-clear-button width-50 height-50 border-0 bg-transparent pos-rel" type="reset"><span class="sr-only">Close Search</span><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button></div>
-                        </form>
+                            <input type="text" id="q" name="q" aria-labelledby="SearchInput" placeholder="Search this website" class="search-textfield height-50 border-0 p-x-sm w-100" />
+							<button type="submit" class="pos-abs gsc-search-button top-0 width-50 height-50 border-0 bg-transparent"><span class="ca-gov-icon-search font-size-30 color-gray" aria-hidden="true"></span><span class="sr-only">Submit</span></button>
+        					<div class="width-50 height-50 close-search-btn"><button class="close-search gsc-clear-button width-50 height-50 border-0 bg-transparent pos-rel" type="reset"><span class="sr-only">Close Search</span><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button></div>                        
+						</form>
                     </div>
 
                 <?php endif; ?>
@@ -315,15 +313,14 @@ $custom_code = get_field('custom_javascript', 'option');
 
             <div id="head-search" class="search-container <?php if($featured_search && !is_page_template('page-search.php') && is_front_page()) { echo('featured-search'); 
 } ;?> hidden-print in play-animation">
-
-                <div class="container">
-                    <form id="Search" class="pos-rel" action="<?php echo site_url('serp');?>">
-                        <span class="sr-only" id="SearchInput">Custom Google Search</span>
-                        <input type="text" id="q" name="q" aria-labelledby="SearchInput" placeholder="Custom Search" class="height-50 border-0 p-x-sm w-100" />
-                        <button type="submit" class="pos-abs gsc-search-button top-0 width-50 height-50 border-0 bg-transparent"><span class="ca-gov-icon-search font-size-30 color-gray" aria-hidden="true"></span><span class="sr-only">Submit</span></button>
-                        <div class="width-50 height-50 close-search-btn"><button class="close-search gsc-clear-button width-50 height-50 border-0 bg-transparent pos-rel" type="reset"><span class="sr-only">Close Search</span><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button></div>
-                    </form>
-                </div>
+					<div class="container">
+                        <form id="Search" class="pos-rel" action="<?php echo site_url('serp');?>">
+                            <span class="sr-only" id="SearchInput">Custom Google Search</span>
+                            <input type="text" id="q" name="q" aria-labelledby="SearchInput" placeholder="Search this website" class="search-textfield height-50 border-0 p-x-sm w-100" />
+							<button type="submit" class="pos-abs gsc-search-button top-0 width-50 height-50 border-0 bg-transparent"><span class="ca-gov-icon-search font-size-30 color-gray" aria-hidden="true"></span><span class="sr-only">Submit</span></button>
+        					<div class="width-50 height-50 close-search-btn"><button class="close-search gsc-clear-button width-50 height-50 border-0 bg-transparent pos-rel" type="reset"><span class="sr-only">Close Search</span><span class="ca-gov-icon-close-mark" aria-hidden="true"></span></button></div>                        
+						</form>
+                    </div>
 
             </div>
 

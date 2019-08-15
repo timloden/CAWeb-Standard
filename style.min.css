@@ -1733,13 +1733,13 @@ body{min-width:992px !important}
 .table-dark{color:inherit}
 .table-dark th,.table-dark td,.table-dark thead th,.table-dark tbody+tbody{border-color:#dee2e6}
 .table .thead-dark th{color:inherit;border-color:#dee2e6}
-}.btn:focus{outline:dotted 1px #fff}
-div.active:focus{outline:dotted 1px #000}
-a:focus{outline:dotted 1px #000}
-.accordion-list li:focus{outline:dotted 1px #000}
-.close:hover,.close:focus{outline:dotted 1px #000}
-.btn.close:hover,.btn.close:focus{outline:dotted 0 #000}
-.nav>li>a:hover,.nav>li>a:focus{outline:dotted 1px #000}
+}.btn:focus{outline:solid 2px #2ea3f2}
+div.active:focus{outline:solid 2px #2ea3f2}
+a:focus{outline:solid 2px #2ea3f2}
+.accordion-list li:focus{outline:solid 2px #2ea3f2}
+.close:hover,.close:focus{outline:solid 2px #2ea3f2}
+.btn.close:hover,.btn.close:focus{outline:solid 0 #2ea3f2}
+.nav>li>a:hover,.nav>li>a:focus{outline:solid 2px #2ea3f2}
 .carousel-inner>.item{position:absolute;top:-999999em;display:block;-webkit-transition:.6s,ease-in-out,left;transition:.6s,ease-in-out,left}
 .carousel-inner>.active{top:0}
 .carousel-inner>.active,.carousel-inner>.next,.carousel-inner>.prev{position:relative}
@@ -1762,10 +1762,39 @@ a:focus{outline:dotted 1px #000}
 .bg-s2{background-color:#9fdbf1 !important}
 .bg-s3{background-color:#50aee4 !important}
 html{overflow-y:scroll}
-@font-face{font-family:'CaGov';src:url("./assets/fonts/CaGov.eot?mqmsfh");src:url("./assets/fonts/CaGov.eot?mqmsfh#iefix") format("embedded-opentype"),url("./assets/fonts/CaGov.ttf?mqmsfh") format("truetype"),url("./assets/fonts/CaGov.woff?mqmsfh") format("woff"),url("./assets/fonts/CaGov.svg?mqmsfh#CaGov") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:'CaGov';src:url("../fonts/CaGov.eot?mgnxzs");src:url("../fonts/CaGov.eot?mgnxzs#iefix") format("embedded-opentype"),url("../fonts/CaGov.ttf?mgnxzs") format("truetype"),url("../fonts/CaGov.woff?mgnxzs") format("woff"),url("../fonts/CaGov.svg?icomoon#CaGov") format("svg");font-weight:normal;font-style:normal}
 .et_font_icon li[class^="ca-gov-icon-"]:before,.et_font_icon li[class*=" ca-gov-icon-"]:before,[class^="ca-gov-icon-"],[class*=" ca-gov-icon-"]{font-family:'CaGov' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .et_font_icon li:before,.et_pb_inline_icon:before,.et_pb_custom_button_icon:after,body #page-container a.et_pb_custom_button_icon:before,.et-pb-icon,ul.et-fb-font-icon-list li:after{font-family:'CaGov','ETModules' !important;content:attr(data-icon);speak:none}
 li[class^="et_pb_ca"]::before,li[class^="et_pb_profile_banner"]::before,li[class^="et_fb_ca"]::before,li[class^="et_fb_profile_banner"]::before{font-family:'CaGov' !important;content:'\e90b' !important}
+.ca-gov-icon-download-cloud:before{content:"\e96c"}
+.ca-gov-icon-upload-cloud:before{content:"\e96d"}
+.ca-gov-icon-biohazard:before{content:"\e918"}
+.ca-gov-icon-malware:before{content:"\e919"}
+.ca-gov-icon-radiation:before{content:"\e955"}
+.ca-gov-icon-chemical-hazard:before{content:"\e956"}
+.ca-gov-icon-danger:before{content:"\e957"}
+.ca-gov-icon-do-not-sign:before{content:"\e958"}
+.ca-gov-icon-quake-house:before{content:"\e95a"}
+.ca-gov-icon-quake-hazard:before{content:"\e95b"}
+.ca-gov-icon-earthquake:before{content:"\e959"}
+.ca-gov-icon-electricity-hazard:before{content:"\e95c"}
+.ca-gov-icon-flood:before{content:"\e95d"}
+.ca-gov-icon-hazard:before{content:"\e95e"}
+.ca-gov-icon-hurricane:before{content:"\e95f"}
+.ca-gov-icon-sea-level-rise:before{content:"\e960"}
+.ca-gov-icon-sea-level-rise-alt:before{content:"\e96e"}
+.ca-gov-icon-severe-weather:before{content:"\e961"}
+.ca-gov-icon-stop-fire:before{content:"\e962"}
+.ca-gov-icon-stop-hand:before{content:"\e963"}
+.ca-gov-icon-tornado:before{content:"\e964"}
+.ca-gov-icon-tsunami:before{content:"\e965"}
+.ca-gov-icon-tsunami-alt:before{content:"\e96f"}
+.ca-gov-icon-volcano:before{content:"\e966"}
+.ca-gov-icon-warning-circle:before{content:"\e967"}
+.ca-gov-icon-warning-square:before{content:"\e968"}
+.ca-gov-icon-tent:before{content:"\e969"}
+.ca-gov-icon-campfire:before{content:"\e96a"}
+.ca-gov-icon-dam:before{content:"\e96b"}
 .ca-gov-icon-hours:before{content:"\e90c"}
 .ca-gov-icon-hours-security:before{content:"\e90d"}
 .ca-gov-icon-albums:before{content:"\e90e"}
@@ -2146,7 +2175,12 @@ code{color:#d71a6f}
 .hidden-md{display:none !important}
 }@media(min-width:1200px){.visible-lg{display:block !important}
 .hidden-lg{display:none !important}
-}@media(min-width:1200px){.container{max-width:1200px}
+}.container{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+@media(min-width:576px){.container{max-width:540px}
+}@media(min-width:768px){.container{max-width:720px}
+}@media(min-width:992px){.container{max-width:960px}
+}@media(min-width:1200px){.container{max-width:1140px}
+}@media(min-width:1280px){.container{max-width:1280px}
 }.group{margin-left:-15px;margin-right:-15px}
 .group::after{display:block;clear:both;content:""}
 .full-width{position:relative;float:left;width:100%;min-height:1px;padding-left:15px;padding-right:15px}
@@ -2156,9 +2190,8 @@ code{color:#d71a6f}
 @media(min-width:768px){.third{float:left;width:33.33333%}
 }.two-thirds{position:relative;min-height:1px;padding-left:15px;padding-right:15px}
 @media(min-width:768px){.two-thirds{float:left;width:66.66667%}
-}.quarter{position:relative;min-height:1px;padding-left:15px;padding-right:15px;position:relative;min-height:1px;padding-left:15px;padding-right:15px}
-@media(min-width:768px){.quarter{float:left;width:50%}
-}@media(min-width:768px){.quarter{float:left;width:25%}
+}.quarter{position:relative;float:left;width:50%;min-height:1px;padding-left:15px;padding-right:15px;position:relative;min-height:1px;padding-left:15px;padding-right:15px}
+@media(min-width:992px){.quarter{float:left;width:25%}
 }.three-quarters{position:relative;min-height:1px;padding-left:15px;padding-right:15px}
 @media(min-width:768px){.three-quarters{float:left;width:75%}
 }@media(min-width:768px){.offset-quarter{margin-left:25%}
@@ -2170,21 +2203,23 @@ code{color:#d71a6f}
 .main-secondary .group .half{padding:0 7px 0 7px}
 .grid-demo{margin-bottom:11.5px}
 .grid-demo div{border:1px solid #777}
-.main-content>.section,.two-column .main-content>.section,.global-header{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
-@media(min-width:576px){.main-content>.section,.two-column .main-content>.section,.global-header{width:576px}
-}@media(min-width:768px){.main-content>.section,.two-column .main-content>.section,.global-header{width:768px}
-}@media(min-width:992px){.main-content>.section,.two-column .main-content>.section,.global-header{width:992px}
-}@media(min-width:1200px){.main-content>.section,.two-column .main-content>.section,.global-header{width:1200px}
+.main-content>.section,.two-column .main-content>.section{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
+@media(min-width:576px){.main-content>.section,.two-column .main-content>.section{max-width:540px}
+}@media(min-width:768px){.main-content>.section,.two-column .main-content>.section{max-width:720px}
+}@media(min-width:992px){.main-content>.section,.two-column .main-content>.section{max-width:960px}
+}@media(min-width:1200px){.main-content>.section,.two-column .main-content>.section{max-width:1140px}
+}@media(min-width:1280px){.main-content>.section,.two-column .main-content>.section{max-width:1280px}
 }#skip-to-content{position:relative;left:50% !important;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:0;height:0;z-index:999}
 #skip-to-content a{width:0;height:0;text-align:center;position:absolute !important;left:50% !important;-webkit-transform:translateX(-50%);transform:translateX(-50%);clip:unset;background-color:white;border-bottom-left-radius:7px;border-bottom-right-radius:7px;overflow:hidden}
 #skip-to-content a:focus{width:160px;height:27px}
 .global-header{position:relative;padding:0;background:#fff;width:auto}
 @media(min-width:768px){.global-header .mobile-controls{display:none !important}
 }.branding{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;position:relative}
-@media(min-width:576px){.branding{width:576px}
-}@media(min-width:768px){.branding{width:768px}
-}@media(min-width:992px){.branding{width:992px}
-}@media(min-width:1200px){.branding{width:1200px}
+@media(min-width:576px){.branding{max-width:540px}
+}@media(min-width:768px){.branding{max-width:720px}
+}@media(min-width:992px){.branding{max-width:960px}
+}@media(min-width:1200px){.branding{max-width:1140px}
+}@media(min-width:1280px){.branding{max-width:1280px}
 }@media(min-width:768px){.branding{height:88px !important}
 }.branding .header-organization-banner{line-height:88px;-webkit-transition:all .3s;transition:all .3s}
 @media(max-width:767px){.branding .header-organization-banner{max-width:400px}
@@ -2192,9 +2227,8 @@ code{color:#d71a6f}
 @media(max-width:992px) and (min-width:768px){.branding .header-organization-banner img{max-width:225px}
 }.branding .header-organization-banner a{display:inline-block;z-index:26;position:relative}
 @media(max-width:767px){.branding .header-organization-banner{position:absolute;margin-top:-5px;padding-right:150px}
-}.header-cagov-logo img{top:4px;height:32px;position:absolute;left:27px}
-@media(max-width:1199px){.header-cagov-logo img{left:5px}
-}.header-cagov-logo a:focus img{outline:1px dotted black}
+}@media(max-width:767px){.branding{max-width:100%}
+}.header-cagov-logo img{top:4px;height:32px;position:absolute}
 .mobile-controls toggle-menu{position:absolute;top:5px;right:10px;left:auto}
 .mobile-controls toggle-search{position:absolute;top:5px;right:0}
 @media(min-width:768px){.header-slideshow-banner.enabled{display:block}
@@ -2249,7 +2283,7 @@ code{color:#d71a6f}
 }.search-container,.featured-search.active{overflow:hidden;z-index:7;position:relative;display:block;top:0;left:0;padding:0 15%;width:100%;max-height:0;border:0;-webkit-transition:all .5s .1s;transition:all .5s .1s}
 @media(min-width:768px){.search-container,.featured-search.active{position:absolute;top:100px}
 }.search-container::after,.featured-search.active::after{display:block;clear:both;content:""}
-.search-container .search-textfield,.featured-search.active .search-textfield{font-size:17.6px;font-size:1.1rem;height:40px;width:100%;border-radius:0;border:3px solid transparent;padding:0 10px;-webkit-transition:border .4s;transition:border .4s;outline:0}
+.search-container .search-textfield,.featured-search.active .search-textfield{font-size:17.6px;font-size:1.1rem;height:40px;width:100%;border-radius:0;border:3px solid transparent;padding:0 10px;-webkit-transition:border .4s;transition:border .4s}
 .search-container .submit-container,.featured-search.active .submit-container{float:left;height:auto;height:40px;-webkit-transition:all .5s .1s;transition:all .5s .1s}
 .search-container .submit-container::after,.featured-search.active .submit-container::after{display:block;clear:both;content:""}
 .search-container .submit-container button,.featured-search.active .submit-container button{float:left;-webkit-transition:all .5s .1s;transition:all .5s .1s;background:0;border-color:white;border-width:3px 3px 3px 0;border-style:solid;width:46px;height:100%;font-size:24px;font-size:1.5rem;line-height:15px;padding:0;-webkit-appearance:none}
@@ -2276,7 +2310,7 @@ code{color:#d71a6f}
 .featured-search.active{position:relative;visibility:visible;opacity:1;-webkit-transition:top .4s,left .2s .4s,width .2s .4s,background-color .6s,border .4s,padding .2s .4s;transition:top .4s,left .2s .4s,width .2s .4s,background-color .6s,border .4s,padding .2s .4s;top:100px;left:0;padding:20px 0;width:100%;border-radius:0;padding-right:15%;padding-left:15%;border-bottom:0;width:100%;max-width:100%}
 }@media(min-width:768px) and (min-width:768px){.featured-search.active{position:absolute}
 }@media(min-width:768px){.featured-search.active .close-search{display:none}
-.featured-search.active .search-textfield{font-size:17.6px;font-size:1.1rem;height:40px;width:100%;border-radius:0;border:3px solid transparent;padding:0 4px;-webkit-transition:border .4s;transition:border .4s;outline:0}
+.featured-search.active .search-textfield{font-size:17.6px;font-size:1.1rem;height:40px;width:100%;border-radius:0;border:3px solid transparent;padding:0 4px;-webkit-transition:border .4s;transition:border .4s}
 }@media(max-width:767px){.search-container.featured-search{padding-right:10px;padding-left:10px}
 }@media(min-width:768px) and (max-width:992px){.featured-search{left:10%;width:80%}
 .flexbox .featured-search{left:0;width:80%}
@@ -2323,7 +2357,7 @@ button.gsc-search-button{cursor:pointer}
 .gsc-control-searchbox-only table.gsc-search-box{margin-bottom:0}
 .gsc-control-searchbox-only table.gsc-search-box td.gsc-input{padding-right:0 !important;width:100% !important}
 .gsc-control-searchbox-only .gsc-input-box{border:none !important;background:transparent !important;height:100%}
-.gsc-control-searchbox-only input.gsc-input{background-color:rgba(255,255,255,0.8);border-radius:0;border:3px solid transparent;-webkit-transition:border .4s;transition:border .4s;outline:0;font-size:1.1rem;height:55px !important;padding:14px !important;opacity:.8 !important;width:100%;background-position-x:7px !important}
+.gsc-control-searchbox-only input.gsc-input{background-color:rgba(255,255,255,0.8);border-radius:0;border:3px solid transparent;-webkit-transition:border .4s;transition:border .4s;font-size:1.1rem;height:55px !important;padding:14px !important;opacity:.8 !important;width:100%;background-position-x:7px !important}
 .gsc-control-searchbox-only input.gsc-search-button,.gsc-control-searchbox-only button.gsc-search-button{opacity:0;width:55px;height:51px;position:absolute;right:2px;top:2px;z-index:55}
 .gsc-control-searchbox-only td.gsc-clear-button{width:1px !important;margin-right:0 !important;margin-left:0 !important;padding-right:0 !important;padding-left:0 !important;position:relative}
 .gsc-control-searchbox-only td.gsc-search-button{width:0 !important;margin-right:0 !important;margin-left:0 !important;padding-right:0 !important;padding-left:0 !important;position:relative}
@@ -2359,10 +2393,12 @@ table.gsc-search-box td{padding:0 !important}
 .google_result_thumbnail{height:68px;width:89px;float:left;margin-right:15px}
 .navigation-search{border-bottom:5px solid #fdb81e;position:relative}
 .main-navigation{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px;position:relative;margin-top:-88px;padding-left:80px}
-@media(min-width:576px){.main-navigation{width:576px}
-}@media(min-width:768px){.main-navigation{width:768px}
-}@media(min-width:992px){.main-navigation{width:992px}
-}@media(min-width:1200px){.main-navigation{width:1200px}
+@media(min-width:576px){.main-navigation{max-width:540px}
+}@media(min-width:768px){.main-navigation{max-width:720px}
+}@media(min-width:992px){.main-navigation{max-width:960px}
+}@media(min-width:1200px){.main-navigation{max-width:1140px}
+}@media(min-width:1280px){.main-navigation{max-width:1280px}
+}@media(max-width:767px){.main-navigation{max-width:100%}
 }.top-level-nav{list-style:none;margin:0;padding:0;-webkit-transition:.3s;-webkit-transition:all .3s;transition:all .3s}
 .top-level-nav .nav-item{position:relative}
 .nav-item .sub-nav{display:none}
@@ -2374,7 +2410,8 @@ table.gsc-search-box td{padding:0 !important}
 }.first-level-link{display:block;padding:12px 0}
 .first-level-link:hover,.first-level-link:focus{text-decoration:none}
 .first-level-link>span[class^="ca-gov-icon"]{display:block;font-size:32px}
-@media(max-width:767px){.first-level-link{display:block;padding-left:5px}
+@media(max-width:767px){.first-level-link{display:block;padding-left:5px;margin:0 2px 0 2px}
+.first-level-link:focus{outline-offset:-2px}
 .first-level-link span[class^="ca-gov-icon"]{font-size:24px;font-size:1.5rem;display:inline-block;vertical-align:-2px;padding-right:5px}
 }@media(min-width:768px){.main-navigation{z-index:25;min-height:91px;padding-left:300px}
 .top-level-nav{display:table;table-layout:auto;display:-webkit-box;display:-ms-flexbox;display:flex;width:100%;min-height:91px}
@@ -2442,12 +2479,12 @@ a.second-level-link:hover,a.second-level-link:focus{text-decoration:none !import
 a.second-level-link [class^="ca-gov-icon-"]{display:inline-block;font-size:22px;font-size:1.375rem;vertical-align:-2px;margin-right:3px}
 @media(max-width:767px){a.second-level-link{padding:10px 15px 10px 40px !important}
 }.link-description{display:block;font-size:16px;font-size:1rem}
-@media(min-width:768px){.unit1{height:65px;overflow:hidden !important}
-.unit2{height:130px;overflow:hidden}
-.unit3{height:195px;overflow:hidden}
-.unit4{height:260px;overflow:hidden}
-.unit5{height:325px;overflow:hidden}
-.unit6{height:390px;overflow:hidden}
+@media(min-width:768px){.unit1{height:65px;overflow:visible}
+.unit2{height:130px;overflow:visible}
+.unit3{height:195px;overflow:visible}
+.unit4{height:260px;overflow:visible}
+.unit5{height:325px;overflow:visible}
+.unit6{height:390px;overflow:visible}
 }@media(min-width:768px){.main-navigation.megadropdown.original .second-level-nav{-moz-column-count:3;-ms-column-count:3;-webkit-column-count:3;-moz-column-gap:20px;-ms-column-gap:20px;-webkit-column-gap:20px;column-count:3;column-gap:20px}
 .main-navigation.megadropdown.original .sub-nav{padding:16px}
 .main-navigation.megadropdown.original .sub-nav[class*="with-image-sm-"] .sub-nav-decoration{width:33.3333%}
@@ -2469,7 +2506,7 @@ a.second-level-link [class^="ca-gov-icon-"]{display:inline-block;font-size:22px;
 .sub-nav.open{display:block;max-height:700px;left:0}
 .main-navigation.active{max-height:5000px}
 .mobile-controls .toggle-menu{border:0;background:0}
-.mobile-controls .toggle-menu:focus{outline:dotted 1px #000}
+.mobile-controls .toggle-menu:focus{outline:solid 2px #2ea3f2}
 @media(max-width:767px){.main-navigation{overflow:hidden}
 .sub-nav{display:block;top:0;position:relative}
 .nav-item{display:block}
@@ -2487,20 +2524,25 @@ a.second-level-link [class^="ca-gov-icon-"]{display:inline-block;font-size:22px;
 .nav-media .subtitle{font-weight:bold}
 .with-image-right{position:absolute;top:0;bottom:0;right:0}
 .with-image-right .nav-media{background-repeat:no-repeat;background-position:50% 50% !important;background-size:cover !important;position:absolute;top:0;bottom:0;right:0;left:0}
-.with-image-left{position:absolute;top:0;bottom:0;left:0}
+@media(max-width:767px){.with-image-right .nav-media{background-image:none !important}
+}.with-image-left{position:absolute;top:0;bottom:0;left:0}
 .with-image-left .nav-media{background-repeat:no-repeat;background-position:50% 50% !important;background-size:cover !important;position:absolute;top:0;bottom:0;right:0;left:0}
-@media(min-width:768px) and (max-width:991px){.sub-nav .three-quarters{left:0}
+@media(max-width:767px){.with-image-left .nav-media{background-image:none !important}
+}@media(min-width:768px) and (max-width:991px){.sub-nav .three-quarters{left:0}
 }.mobile-controls{font-size:40px;font-size:2.5rem;padding:.2em;cursor:pointer;text-align:right;position:relative;color:#046b99;background:#fff;top:0;width:100%;height:100%;padding-right:0;margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}
-@media(min-width:576px){.mobile-controls{width:576px}
-}@media(min-width:768px){.mobile-controls{width:768px}
-}@media(min-width:992px){.mobile-controls{width:992px}
-}@media(min-width:1200px){.mobile-controls{width:1200px}
+@media(min-width:576px){.mobile-controls{max-width:540px}
+}@media(min-width:768px){.mobile-controls{max-width:720px}
+}@media(min-width:992px){.mobile-controls{max-width:960px}
+}@media(min-width:1200px){.mobile-controls{max-width:1140px}
+}@media(min-width:1280px){.mobile-controls{max-width:1280px}
 }.mobile-controls .ca-gov-icon-menu-toggle-open,.mobile-controls .ca-gov-icon-menu-toggle-closed{padding-left:1em;padding-right:1em;line-height:44px}
 .mobile-controls .toggle-menu{padding:0;width:52px;cursor:pointer}
 .mobile-controls .toggle-search{padding:0;width:52px;border:0;background:0;cursor:pointer}
-.mobile-controls .toggle-search:focus{outline:dotted 1px #000}
-.main-navigation .mobile-controls{text-align:left;background-color:#fff}
-.mobile-control.toggle-sub-nav{position:absolute;top:0;right:0;font-size:24px;font-size:1.5rem;width:80px;text-align:center;cursor:pointer;padding-left:7px;border:0;line-height:60px}
+.mobile-controls .toggle-search:focus{outline:solid 2px #2ea3f2}
+@media(max-width:767px){.mobile-controls{max-width:100%}
+}.main-navigation .mobile-controls{text-align:left;background-color:#fff}
+.mobile-control.toggle-sub-nav{position:absolute;top:0;right:2px;font-size:24px;font-size:1.5rem;width:80px;text-align:center;cursor:pointer;padding-left:7px;border:0;line-height:58px}
+.mobile-control.toggle-sub-nav:focus{outline-offset:-3px}
 .mobile-control.toggle-sub-nav:active .rotate{position:relative;top:0;left:0}
 .main-nav-icons{width:130px;height:70px;position:relative;z-index:1}
 #nav-icon3{width:55px;height:50px;position:relative;margin-top:5px;-webkit-transform:rotate(0);transform:rotate(0);-webkit-transition:.5s ease-in-out;transition:.5s ease-in-out;cursor:pointer}
@@ -2535,16 +2577,16 @@ a.second-level-link [class^="ca-gov-icon-"]{display:inline-block;font-size:22px;
 }@media(min-width:767px) and (max-width:991px){.utility-header .settings-links{padding-right:0}
 }@media(min-width:992px){.utility-header .settings-links{padding-right:5px}
 }.utility-header [class^="ca-gov-icon-"]{font-size:17.6px;font-size:1.1rem;vertical-align:-2px}
-@media(max-width:767px){.utility-header .social-media-links li{padding:0 1px}
+@media(max-width:767px){.utility-header .container{max-width:100%}
+.utility-header .social-media-links li{padding:0 1px}
 .utility-header [class^="ca-gov-icon-"]{font-size:12.8px;font-size:.8rem}
-.utility-header .header-cagov-logo img{left:10px}
 }.utility-header .located-city-name{margin-left:5px}
 .utility-header .geo-zip-input{margin-left:5px;width:50%;vertical-align:initial;line-height:120%;background:white;color:black}
 .utility-header .flex-row{display:-webkit-box;display:-ms-flexbox;display:flex}
 .utility-header .flex-row .social-media-links{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}
-.utility-header .flex-row .social-media-links .header-cagov-logo{margin-right:40px}
-@media(min-width:767px) and (max-width:991px){.utility-header .flex-row .social-media-links .header-cagov-logo{margin-right:20px}
-}@media(max-width:767px){.utility-header .flex-row .social-media-links .header-cagov-logo{margin-right:15px}
+@media(min-width:992px){.utility-header .flex-row .social-media-links .header-cagov-logo{margin-right:20px;padding-left:20px}
+}@media(min-width:767px) and (max-width:991px){.utility-header .flex-row .social-media-links .header-cagov-logo{margin-right:20px;padding-left:15px}
+}@media(max-width:767px){.utility-header .flex-row .social-media-links .header-cagov-logo{margin-right:15px;padding-left:15px}
 }.utility-header .flex-row .social-media-links .header-cagov-logo a{margin:0;padding-top:0}
 .utility-header .flex-row .social-media-links a{margin:0 10px 0 10px}
 @media(max-width:767px){.utility-header .flex-row .social-media-links a{margin:0 4px 0 4px}
@@ -2553,7 +2595,7 @@ a.second-level-link [class^="ca-gov-icon-"]{display:inline-block;font-size:22px;
 }.utility-header .flex-row .settings-links{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:auto;-webkit-box-align:baseline;-ms-flex-align:baseline;align-items:baseline;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;padding-top:3px}
 .utility-header .flex-row .settings-links a{margin:0 10px 0 10px}
 @media(max-width:767px){.utility-header .flex-row .settings-links a{margin:5px 4px 0 4px;padding:0}
-}.utility-header .flex-row .settings-links button{margin:-5px 4px 0 4px}
+}.utility-header .flex-row .settings-links button{margin:0 4px 0 4px}
 .section{padding-top:25px;padding-bottom:25px;background:#fff;position:relative;overflow:hidden}
 @media(max-width:767px){.section{padding-top:23px;padding-bottom:23px}
 }.section.collapsed{padding-top:0;padding-bottom:0}
@@ -2902,7 +2944,7 @@ to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
 20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}
 }.shake{-webkit-animation-name:shake;animation-name:shake}
 .alert-banner{margin-bottom:0;padding:5px 0;border-radius:0;-webkit-column-rule:rgba(255,255,255,0.8);-moz-column-rule:rgba(255,255,255,0.8);column-rule:rgba(255,255,255,0.8);-webkit-transition:all .2s;transition:all .2s}
-.alert-banner .close{right:-10px;opacity:1}
+.alert-banner .close{position:relative;top:0;right:-5px;padding:0 10px;text-shadow:none}
 .alert-banner .container:after{content:" ";display:table;clear:both}
 .alert-level{display:inline-block;font-weight:bold;padding:0 5px;margin:0 5px;font-size:13.92px;font-size:.87rem}
 .alert-level [class^="ca-gov-icon-"]{margin-right:3px}
@@ -2949,10 +2991,11 @@ to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}
 .accordion .panel-heading .panel-title,.panel-group .panel-heading .panel-title,.service-tile-content .panel-heading .panel-title{margin-top:0;display:block;font-size:18px;font-size:1.125rem}
 .accordion .panel-heading .panel-title a,.panel-group .panel-heading .panel-title a,.service-tile-content .panel-heading .panel-title a{display:block;position:relative;outline:0}
 .accordion .panel-heading .panel-title a:hover,.accordion .panel-heading .panel-title a:focus,.panel-group .panel-heading .panel-title a:hover,.panel-group .panel-heading .panel-title a:focus,.service-tile-content .panel-heading .panel-title a:hover,.service-tile-content .panel-heading .panel-title a:focus{text-decoration:none;background:#f0f0f0}
-.accordion .panel-heading .panel-title a:after,.panel-group .panel-heading .panel-title a:after,.service-tile-content .panel-heading .panel-title a:after{content:"\43";font-family:'CaGov';position:absolute;right:10px;top:50%;margin-top:-11px;color:#777}
-.accordion .panel-heading .panel-title a.collapsed:after,.panel-group .panel-heading .panel-title a.collapsed:after,.service-tile-content .panel-heading .panel-title a.collapsed:after{content:"\45"}
+.accordion .panel-heading .panel-title a span[aria-hidden="true"],.panel-group .panel-heading .panel-title a span[aria-hidden="true"],.service-tile-content .panel-heading .panel-title a span[aria-hidden="true"]{position:absolute;right:10px;top:50%;margin-top:-11px;color:#777}
+.accordion .panel-heading .panel-title a span[aria-hidden="true"]:after,.panel-group .panel-heading .panel-title a span[aria-hidden="true"]:after,.service-tile-content .panel-heading .panel-title a span[aria-hidden="true"]:after{content:"\43";font-family:'CaGov'}
+.accordion .panel-heading .panel-title a.collapsed span[aria-hidden="true"]:after,.panel-group .panel-heading .panel-title a.collapsed span[aria-hidden="true"]:after,.service-tile-content .panel-heading .panel-title a.collapsed span[aria-hidden="true"]:after{content:"\45"}
 .accordion .panel{overflow:visible}
-.accordion .panel a:focus{outline:dotted 1px #000}
+.accordion .panel a:focus{outline:solid 2px #2ea3f2}
 .accordion-list{list-style:none}
 .accordion-list li.tab{cursor:pointer;padding-bottom:0;margin-top:13px}
 .accordion-list li.tab a{color:#046b99}
@@ -3024,6 +3067,7 @@ hr.hr-light{border:0;border-bottom-style:solid;border-bottom-width:1px;border-bo
 .profile-item .header,.profile-item .body{margin-left:90px}
 .profile-banner{background:#fff;background:rgba(255,255,255,0.5);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff',endColorstr='#80ffffff',GradientType=0);border:1px solid #d6d6d6;margin-bottom:15px;clear:both}
 .main-secondary>.profile-banner{margin-top:23px}
+.profile-banner .inner{background-size:contain}
 .banner-subtitle{font-size:14.4px;font-size:.9rem;margin:0 30px .2em 0;padding:4px 35px 2px 10px;background:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,0.1)),to(rgba(0,0,0,0)));background:linear-gradient(to right,rgba(0,0,0,0.1) 0,rgba(0,0,0,0) 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#20000000',endColorStr='#00000000',GradientType='1')}
 .banner-title{font-family:'Arial Narrow','Helvetica Narrow',Arial,Helvetica,sans-serif;font-stretch:condensed;font-weight:bold;color:#555;font-size:19.2px;font-size:1.2rem;padding-right:70px;padding-left:10px}
 .banner-link{font-size:11.2px;font-size:.7rem;margin:0;padding-left:12px;padding-bottom:10px;padding-top:10px}
@@ -3174,11 +3218,12 @@ input[type="checkbox"]:checked+.bg-primary--checked,input[type="radio"]:checked+
 input[type="checkbox"]:checked+.bg-highlight--checked,input[type="radio"]:checked+.bg-highlight--checked,input[type="checkbox"]:checked+* .bg-highlight--checked,input[type="radio"]:checked+* .bg-highlight--checked{background-color:#fdb81e}
 input[type="checkbox"]:checked+.color-white--checked,input[type="radio"]:checked+.color-white--checked,input[type="checkbox"]:checked+* .color-white--checked,input[type="radio"]:checked+* .color-white--checked{color:#fff !important}
 input[type="checkbox"]:focus+div,input[type="radio"]:focus+div{-webkit-box-shadow:0 0 2px 2px #50aee4;box-shadow:0 0 2px 2px #50aee4}
-input[type="checkbox"]:focus+.btn,input[type="radio"]:focus+.btn{outline:1px dotted #000}
+input[type="checkbox"]:focus+.btn,input[type="radio"]:focus+.btn{outline:solid 2px #2ea3f2}
 .custom-radio .custom-control-input:checked ~ .custom-control-label::before{background-color:#046b99}
 .custom-checkbox .custom-control-label::before{border-radius:0}
 .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{background-color:#046b99;border-radius:0}
 .valid-feedback{color:#32852e}
+input:focus,textarea:focus,button:focus,select:focus{outline:solid 2px #2ea3f2}
 .pub-item{margin-bottom:11.5px}
 .pub-item::after{display:block;clear:both;content:""}
 .pub-item.odd{background:#fafafa}
@@ -3423,7 +3468,7 @@ blockquote.blockquote-reverse footer:after,blockquote.blockquote-reverse small:a
 .btn-more.disabled,.btn-more[disabled],fieldset[disabled] .btn-more{cursor:not-allowed;opacity:.65;filter:alpha(opacity=65)}
 .btn-more .more-title{display:block}
 .btn-more .more-icon{font-size:24px;font-size:1.5rem}
-.btn-more:focus{outline:dotted 2px #000}
+.btn-more:focus{outline:solid 2px #2ea3f2}
 .btn-more.inverse{background-color:#000;color:#fff}
 .btn-more.inverse:hover,.btn-more.inverse:focus{color:#fdb81e}
 @media(max-width:767px){[role="group"].btn-group{margin-top:10px;display:table;width:100%;table-layout:fixed;border-collapse:separate}
@@ -3440,7 +3485,8 @@ blockquote.blockquote-reverse footer:after,blockquote.blockquote-reverse small:a
 .btn-block{white-space:normal}
 .site-settings{padding-right:20px}
 .site-settings button.close{position:relative;right:-10px;color:#fff;text-shadow:none;opacity:.8;font-size:2.5em}
-.site-settings button.close:hover{color:#fdb81e !important}
+@media(max-width:767px){.site-settings button.close{margin-top:20px}
+}.site-settings button.close:hover{color:#fdb81e !important}
 .site-settings button.close:focus{color:#fdb81e !important}
 .site-settings button.close span{position:relative;top:-10px}
 .location-settings label{font-weight:normal;padding-right:1rem !important}
@@ -3452,7 +3498,7 @@ blockquote.blockquote-reverse footer:after,blockquote.blockquote-reverse small:a
 .more-button .more-content{position:absolute;overflow:hidden;width:100%}
 .more-button .btn-more{position:relative}
 .service-tile-panel{visibility:hidden;position:absolute}
-.service-tile-panel .btn.close{font-size:56px;font-size:3.5rem}
+.service-tile-panel .btn.close{font-size:56px;font-size:3.5rem;position:relative;z-index:3}
 .service-tile-full{clear:both;width:100%;background:whitesmoke;height:auto}
 .service-tile-full.is-open .service-tile-panel{visibility:visible;position:relative}
 .service-tile{position:relative;float:left;width:100%;min-height:1px;padding-left:0;padding-right:0;position:relative;min-height:1px;padding-left:0;padding-right:0;position:relative;min-height:1px;padding-left:0;padding-right:0;position:relative;padding:0;margin:0;cursor:pointer;text-align:center;outline:0;min-height:240px;color:#e1f2f7;background:#046b99;background-position:center;background-repeat:no-repeat;background-size:cover}
@@ -3539,7 +3585,7 @@ blockquote.blockquote-reverse footer:after,blockquote.blockquote-reverse small:a
 .carousel-video-submenu .owl-item.watching button{border-width:5px;border-style:solid}
 .carousel-video-submenu .item-thumbnail{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .carousel-video-submenu .item-thumbnail .videoThumb{display:block;width:100%;background-size:cover;background-position:center,center;height:160px;zoom:1}
-.carousel-video-submenu .item-thumbnail .videoThumb:focus{outline:3px dotted #000}
+.carousel-video-submenu .item-thumbnail .videoThumb:focus{outline:solid 2px #2ea3f2}
 .carousel-video-submenu .item-thumbnail .videoThumb:focus+.item-overlay{opacity:1}
 @media(max-width:991px){.carousel-video-submenu .item-thumbnail .videoThumb{height:110px}
 }@media(max-width:767px){.carousel-video-submenu .item-thumbnail .videoThumb{height:80px}
@@ -3569,10 +3615,22 @@ blockquote.blockquote-reverse footer:after,blockquote.blockquote-reverse small:a
 .carousel-slider .owl-item img,.carousel-slider .owl-item .item-logo{width:auto;float:left;margin:0 10px 10px 0;font-size:32px}
 .carousel-gallery .item{text-align:center}
 .carousel-gallery .owl-item img{width:auto;display:inline-block;max-width:100%;margin:0 10px 10px 0}
-.banner-control:focus,.banner-control .pause:focus,.banner-control .play:focus,.owl-dot:focus,.owl-prev:focus,.owl-next:focus{outline:2px dotted #333}
-.owl-carousel:focus{outline:0}
+.banner-control:focus,.banner-control .pause:focus,.banner-control .play:focus,.owl-dot:focus,.owl-prev:focus,.owl-next:focus{outline:solid 2px #2ea3f2}
+.owl-carousel:focus{outline:solid 2px #2ea3f2}
+.owl-carousel .owl-nav button.owl-prev:focus{margin-left:3em}
+.owl-carousel .owl-nav button.owl-next:focus{margin-right:3em}
+.owl-carousel:hover .owl-nav button.owl-prev:focus{margin-left:0}
+.owl-carousel:hover .owl-nav button.owl-next:focus{margin-right:0}
 .owl-video-wrapper .item-overlay{display:none}
-.plotly-chart .plotly-chart--loading{font-size:150%;text-align:center;display:block;vertical-align:middle;height:100%;width:100%;color:#777}
+.header-slideshow-banner{position:relative;height:500px}
+.header-slideshow-banner .banner-pager,.header-slideshow-banner .banner-play-pause{top:350px;z-index:1}
+.header-slideshow-banner .carousel{margin-top:0;margin-bottom:0}
+@media(max-width:767px){.header-slideshow-banner{display:block;height:160px}
+.header-slideshow-banner #primary-carousel{margin:0;padding:0}
+.header-slideshow-banner #primary-carousel .slide-text{bottom:-11.5px;right:0;font-size:14px;width:100%}
+.header-slideshow-banner #primary-carousel .slide-text .title{font-size:19px}
+}@media(max-width:767px){.header-slideshow-banner .banner-pager,.header-slideshow-banner .banner-play-pause{top:15px}
+}.plotly-chart .plotly-chart--loading{font-size:150%;text-align:center;display:block;vertical-align:middle;height:100%;width:100%;color:#777}
 .plotly-chart .hovertext path{stroke-width:7px}
 .plotly-chart img{width:100%}
 .plotly-chart .plot-container.plotly{min-height:300px}

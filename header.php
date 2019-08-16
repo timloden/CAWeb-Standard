@@ -73,9 +73,6 @@ $custom_css = get_field('custom_css', 'option');
 $custom_code = get_field('custom_javascript', 'option');
 
 ?>
-<script>
-console.log(GetCookie(dismissed-notifications));
-</script>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>

@@ -13,6 +13,14 @@ $google_settings = get_field('google', 'option');
 $search_engine_id = isset($google_settings['search_engine_id']) ? $google_settings['search_engine_id'] : false;
 $analytics_id = isset($google_settings['analytics']) ? $google_settings['analytics'] : false;
 
+$google_translate = $google_settings['enable_google_translate'];
+
+if ($google_translate === 'none') {
+	$translate_status = 0;
+} else {
+	$translate_status = 1;
+}
+
 $multisite_ga = get_field('analytics_id', 'option');
 
 $general_settings = get_field('general_settings', 'option');
@@ -111,7 +119,7 @@ var args = {
 	"ca_frontpage_search_enabled":"<?php echo esc_attr($featured_search); ?>",
 	"ca_google_search_id":"<?php echo esc_attr($search_engine_id); ?>",
 	"caweb_multi_ga":"<?php echo esc_attr($multisite_ga); ?>",
-	"ca_google_trans_enabled":""
+	"ca_google_trans_enabled":"<?php echo esc_attr($translate_status); ?>"
 };
 /* ]]> */
 </script>

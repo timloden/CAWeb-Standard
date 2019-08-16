@@ -51,7 +51,6 @@ $google_translate = $google_settings['enable_google_translate'];
 
 if ($google_settings['enable_google_translate'] == 'custom') {
     $google_custom_translate = get_field('google_custom_translate', 'option');
-
     $translate_url = isset($google_custom_translate['translate_page_url']) ? $google_custom_translate['translate_page_url'] : false;
     $translate_icon = isset($google_custom_translate['translate_icon']) ? $google_custom_translate['translate_icon'] : false;
 }
@@ -226,7 +225,7 @@ $custom_code = get_field('custom_javascript', 'option');
 
         <?php if ($google_translate =='custom') : ?>
                             <a id="caweb-gtrans-custom" target="_blank" href="<?php echo esc_url($translate_url); ?>">
-                                <span class="ca-gov-<?php echo esc_attr($translate_icon); ?>"></span> Translate</a>
+                                <span class="<?php if ($translate_icon) { echo esc_attr($translate_icon); } else { echo 'ca-gov-icon-globe'; } ?>"></span>&nbsp;Translate</a>
         <?php endif; ?>
 
                         <?php if ($google_translate =='standard') : ?>

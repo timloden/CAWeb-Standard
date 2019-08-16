@@ -215,7 +215,7 @@ $custom_code = get_field('custom_javascript', 'option');
                     <?php endif; ?>
 
                         <?php if ($utility_contact_page) : ?>
-                            <a href="<?php echo esc_url($utility_contact_page);?>"><span class="ca-gov-icon-contact-us" aria-hidden="true"></span>Contact Us</a>
+                            <a href="<?php echo esc_url($utility_contact_page);?>"><span class="ca-gov-icon-contact-us" aria-hidden="true"></span> Contact Us</a>
                         <?php endif; ?>
 
                         <button class="btn btn-xs btn-primary" data-toggle="collapse" data-target="#siteSettings" aria-expanded="false" aria-controls="siteSettings"><span class="ca-gov-icon-gear" aria-hidden="true"></span> Settings</button>

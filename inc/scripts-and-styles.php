@@ -67,13 +67,19 @@ function caweb_scripts() {
 	// not needed unless we add some 3rd party scripts
 	//wp_enqueue_script( 'vendor-scripts', get_template_directory_uri() . '/assets/js/vendor.min.js', ['jquery'], '0.0.0', true );
 
-
-
 	if( have_rows('upload_javascript', 'options') ):
 		while( have_rows('upload_javascript', 'option') ): the_row();
 			wp_enqueue_script( 'custom-js-' . get_row_index(), get_sub_field('javascript_files'), ['jquery'], '0.0.0', true );
 		endwhile;
 	endif;
+
+	// CAWeb 1.0 Accessibility script
+	wp_register_script('caweb-accessibility-scripts', get_template_directory_uri() . '/assets/js/custom/libs/accessibility.js', array('jquery'), CAWebVersion, true);
+
+	wp_localize_script('caweb-accessibility-scripts', 'accessibleargs',
+				array('ajaxurl' => admin_url('admin-post.php')));
+				
+	wp_enqueue_script('caweb-accessibility-scripts');
 
 }
 

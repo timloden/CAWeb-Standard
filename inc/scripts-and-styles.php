@@ -58,13 +58,10 @@ function caweb_scripts() {
 		wp_enqueue_script( 'geolocator', get_template_directory_uri() . '/assets/js/custom/libs/geolocator.js', [], '0.0.0', true );
 	}
 
-	if ($search_engine_id) {
-		//wp_enqueue_script( 'google', get_template_directory_uri() . '/assets/js/custom/libs/google.js', [], '0.0.0', true );
-	}
-
 	wp_enqueue_script( 'custom-scripts', get_template_directory_uri() . '/assets/js/custom.min.js', ['jquery'], '0.0.0', true );
 
 	// not needed unless we add some 3rd party scripts
+	
 	//wp_enqueue_script( 'vendor-scripts', get_template_directory_uri() . '/assets/js/vendor.min.js', ['jquery'], '0.0.0', true );
 
 	if( have_rows('upload_javascript', 'options') ):
@@ -74,7 +71,7 @@ function caweb_scripts() {
 	endif;
 
 	// CAWeb 1.0 Accessibility script
-	wp_register_script('caweb-accessibility-scripts', get_template_directory_uri() . '/assets/js/custom/libs/accessibility.js', array('jquery'), CAWebVersion, true);
+	wp_register_script('caweb-accessibility-scripts', get_template_directory_uri() . '/assets/js/custom/libs/accessibility.js', array('jquery'), 0.0.0, true);
 
 	wp_localize_script('caweb-accessibility-scripts', 'accessibleargs',
 				array('ajaxurl' => admin_url('admin-post.php')));

@@ -12,14 +12,10 @@
 $general_settings = get_field('general_settings', 'option');
 
 if ($general_settings['organization_logo']) {
-    $logo = $general_settings['organization_logo'];
-    // if ($logo['alt'] != '') {
-    //     $logo_alt = $logo['alt'];
-    // } else {
-    //     $logo_alt = get_bloginfo();
-    // }
+    $logo = $general_settings['organization_logo']['url'];
+    //$logo = $logo['url'];
 } else {
-    $logo = get_template_directory_uri() . '/images/template-logo.png';
+    $logo = get_template_directory_uri() . '/assets/img/template-logo.png';
 }
 
 $logo_alt = get_bloginfo();
@@ -262,7 +258,7 @@ $custom_code = get_field('custom_javascript', 'option');
           <div class="branding">
             <div class="header-organization-banner">
                 <a href="/">
-                    <img src="<?php echo esc_url($logo['url']); ?>" alt="<?php echo esc_attr($logo_alt); ?>" />
+                    <img src="<?php echo esc_url($logo); ?>" alt="<?php echo esc_attr($logo_alt); ?>" />
                 </a>
             </div>
         </div>

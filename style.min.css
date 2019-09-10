@@ -6572,6 +6572,9 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .mfp-ie7 .mfp-container{padding:0}
 .mfp-ie7 .mfp-content{padding-top:44px}
 .mfp-ie7 .mfp-close{top:0;right:0;padding-top:0}
+@font-face{font-family:ETmodules;src:url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.eot);src:url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.eot?#iefix) format("embedded-opentype"),url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.ttf) format("truetype"),url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.woff) format("woff"),url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.svg#ETmodules) format("svg");font-weight:400;font-style:normal}
+.et-db #et-boc .et_pb_blog_grid a.more-link,.et-db #et-boc .et_pb_posts a.more-link{display:inline-block;text-transform:capitalize}
+.et-db #et-boc .et_pb_blurb_position_left .et_pb_blurb_content .et_pb_blurb_container .et_pb_module_header{margin-top:0}
 .et-db #et-boc .et_pb_row{margin:0 auto;width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
 @media(min-width:576px){.et-db #et-boc .et_pb_row{max-width:576px}
 }@media(min-width:768px){.et-db #et-boc .et_pb_row{max-width:768px}

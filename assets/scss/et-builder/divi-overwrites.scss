@@ -1,0 +1,27 @@
+// overwrites to default divi styles
+
+// fonts
+@font-face {
+	font-family: ETmodules;
+	src: url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.eot);
+	src: url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.eot?#iefix) format('embedded-opentype'),url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.ttf) format('truetype'),url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.woff) format('woff'),url(/wp-content/plugins/divi-builder/core/admin/fonts/modules.svg#ETmodules) format('svg');
+	font-weight: 400;
+	font-style: normal
+}
+
+// blog list
+
+.et-db #et-boc .et_pb_blog_grid a.more-link,.et-db #et-boc .et_pb_posts a.more-link {
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+// blurb 
+
+.et-db #et-boc .et_pb_blurb_position_left .et_pb_blurb_content {
+    .et_pb_blurb_container {
+        .et_pb_module_header {
+            margin-top: 0;
+        }
+    }
+}

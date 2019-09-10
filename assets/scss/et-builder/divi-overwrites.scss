@@ -56,3 +56,10 @@ $default-outline: solid 2px #007bff;
 .et-db #et-boc .et_pb_login_0.et_pb_login {
     background-color: #046b99;
 }
+
+// post navigation 
+
+.et-db #et-boc .et_pb_posts_nav a {
+    background: none;
+    text-decoration: underline !important;
+}

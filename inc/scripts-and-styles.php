@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'caweb_styles', 99);
 function caweb_styles()
 {
 
-    //wp_dequeue_style('et-builder-modules-style');
+    wp_dequeue_style('et-builder-modules-style');
 
     $general_settings = get_field('general_settings', 'option');
     $color_scheme = $general_settings['color_scheme'];

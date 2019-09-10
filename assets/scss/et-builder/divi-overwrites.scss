@@ -11,6 +11,12 @@ $default-outline: solid 2px #007bff;
 	font-style: normal
 }
 
+// global 
+
+.et-db #et-boc .et_pb_module a:focus {
+    outline: $default-outline !important;
+}
+
 // blog list
 
 .et-db #et-boc .et_pb_blog_grid a.more-link,.et-db #et-boc .et_pb_posts a.more-link {

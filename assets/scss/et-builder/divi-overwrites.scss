@@ -1,5 +1,7 @@
 // overwrites to default divi styles
 
+$default-outline: solid 2px #007bff;
+
 // fonts
 @font-face {
 	font-family: ETmodules;
@@ -23,5 +25,22 @@
         .et_pb_module_header {
             margin-top: 0;
         }
+    }
+}
+
+// contact form 
+
+.et-db #et-boc .et_pb_contact p input,.et-db #et-boc .et_pb_contact p textarea {
+    color: #000 !important;
+    &:focus {
+        outline: $default-outline !important;
+    }
+}
+
+// newsletter
+
+.et-db #et-boc .et_pb_newsletter_form input {
+    &:focus {
+        outline: $default-outline !important;
     }
 }

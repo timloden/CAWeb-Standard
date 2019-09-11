@@ -17,6 +17,48 @@ $default-outline: solid 2px #007bff;
     outline: $default-outline !important;
 }
 
+.et-db {
+	#et-boc {
+		.et_pb_row {
+			margin: 0 auto;
+			width: 100%;
+		    padding-right: 15px;
+		    padding-left: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+			@media (min-width: 576px) {
+
+			    max-width: 576px;
+			}
+
+			@media (min-width: 768px) {
+
+			    max-width: 768px;
+			}
+
+			@media (min-width: 992px) {
+
+			    max-width: 992px;
+
+			}
+
+			@media (min-width: 1200px) {
+
+
+			    max-width: 1200px;
+
+			}
+		}
+
+		.et-fb-modules-list ul li {
+			.cacm_card:before {
+				font-family: 'CaGov'!important;
+    			content: "\e658"!important;
+			}
+		}
+	}
+}
+
 // blog list
 
 .et-db #et-boc .et_pb_blog_grid a.more-link,.et-db #et-boc .et_pb_posts a.more-link {

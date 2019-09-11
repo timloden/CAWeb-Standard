@@ -87,7 +87,7 @@ $custom_code = get_field('custom_javascript', 'option');
     <?php wp_head(); ?>
 
     <?php if ($custom_css) : ?>
-        <style type="text/css" media="screen">
+        <style id="caweb-custom-inline-css">
         <?php echo($custom_css); ?>
         </style>
     <?php endif; ?>

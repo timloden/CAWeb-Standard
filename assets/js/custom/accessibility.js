@@ -9,6 +9,11 @@ jQuery( document ).ready( function() {
 	// get divi CTAs
 	var diviCtas = $( 'div.et_pb_promo' );
 
+	// get divi circle counters
+	var diviCircleCounters = $( 'div.et_pb_circle_counter' );
+
+
+
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
 
@@ -37,6 +42,17 @@ jQuery( document ).ready( function() {
 	if ( diviCtas.length ) {
 
 		diviCtas.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
+
+	if ( diviCircleCounters.length ) {
+
+		diviCircleCounters.each( function( index, element ) {
 
 			if ( $( element ).hasClass( 'et_clickable' ) ) {
 				$( element ).attr( 'tabIndex', 0 );

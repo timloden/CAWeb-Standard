@@ -154,3 +154,17 @@ $default-outline: solid 2px #007bff;
         }
     }
 }
+
+// person
+
+.et_pb_team_member_image {
+    img {
+        max-width: 100%;
+    }
+}
+
+.et-db #et-boc ul.et_pb_member_social_links {
+    margin-top: 20px;
+    padding: 0;
+    margin-left: 0;
+}

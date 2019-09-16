@@ -6595,6 +6595,8 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .et-db #et-boc .et_pb_text_color_dark .mejs-container .mejs-controls .mejs-time span{color:#000}
 .et_pb_countdown_timer.et_pb_bg_layout_dark{background-color:#046b99}
 .et_pb_countdown_timer .et_pb_countdown_timer_container .values,.et_pb_countdown_timer .et_pb_countdown_timer_container .section{background-color:transparent}
+.et_pb_team_member_image img{max-width:100%}
+.et-db #et-boc ul.et_pb_member_social_links{margin-top:20px;padding:0;margin-left:0}
 img{height:auto}
 .global-footer .copyright{padding:5px 0}
 .panel-heading .triangle{z-index:99}

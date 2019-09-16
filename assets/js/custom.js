@@ -871,6 +871,9 @@ jQuery( document ).ready( function() {
 	// get divi number counters
 	var diviNumberCounters = $( 'div.et_pb_number_counter' );
 
+	// get divi persons
+	var diviPersons = $( 'div.et_pb_team_member' );
+
 
 
 	// find pricing tables and add tabindex to links
@@ -934,6 +937,17 @@ jQuery( document ).ready( function() {
 	if ( diviNumberCounters.length ) {
 
 		diviNumberCounters.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
+
+	if ( diviPersons.length ) {
+
+		diviPersons.each( function( index, element ) {
 
 			if ( $( element ).hasClass( 'et_clickable' ) ) {
 				$( element ).attr( 'tabIndex', 0 );

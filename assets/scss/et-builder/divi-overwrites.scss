@@ -168,3 +168,10 @@ $default-outline: solid 2px #007bff;
     padding: 0;
     margin-left: 0;
 }
+
+// search module
+
+.et-db #et-boc .et_pb_search input.et_pb_searchsubmit {
+    background-color: #333;
+    color: #fff;
+}

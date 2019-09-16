@@ -175,3 +175,9 @@ $default-outline: solid 2px #007bff;
     background-color: #333;
     color: #fff;
 }
+
+// divi video slider 
+
+.et-db #et-boc .et_pb_slider_carousel.et_pb_controls_light+.et_pb_carousel .et_pb_video_play:focus {
+    opacity: 1;
+}

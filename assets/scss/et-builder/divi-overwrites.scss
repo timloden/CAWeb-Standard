@@ -13,7 +13,7 @@ $default-outline: solid 2px #007bff;
 
 // global 
 
-.et-db #et-boc .et_pb_module a:focus {
+.et-db #et-boc .et_pb_module a:focus, .et_clickable:focus {
     outline: $default-outline !important;
 }
 
@@ -110,4 +110,27 @@ $default-outline: solid 2px #007bff;
 .mfp-figure figure {
     background-color: #000;
     border-color: #000;
+}
+
+// pricing tables
+.et-db #et-boc .et_pb_pricing_heading {
+    background-color: #046b99;
+}
+
+.et-db {
+    #et-boc {
+    
+        .et_pb_sum {
+            color: #046b99;
+        }
+
+        .et_pb_frequency, .et_pb_dollar_sign {
+            color: #000;
+        }
+
+        .et_pb_pricing_table_button {
+            color: #046b99;
+            border-color: #046b99;
+        }
+    }
 }

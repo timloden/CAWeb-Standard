@@ -400,8 +400,8 @@ jQuery( document ).ready( function() {
     Retrieve all Divi Blog Modules
     */
 	var blog_modules = $( 'div' ).filter( function() {
- return this.className.match( /\bet_pb_blog_\d\b/ ); 
-});
+		return this.className.match( /\bet_pb_blog_\d\b/ );
+	});
 
 	/*
     Divi Blurb Module Accessibility
@@ -414,16 +414,16 @@ jQuery( document ).ready( function() {
     Retrieve all Divi Tab Modules
     */
 	var tab_modules = $( 'div' ).filter( function() {
- return this.className.match( /\bet_pb_tabs_\d\b/ ); 
-});
+		return this.className.match( /\bet_pb_tabs_\d\b/ );
+	});
 
 	/*
     Divi Image Module (Standard & Fullwidth) Accessibility
     Retrieve all Divi Image Modules
     */
 	var image_modules = $( 'div' ).filter( function() {
- return this.className.match( /\bet_pb_image_\d\b|\bet_pb_fullwidth_image_\d\b/ ); 
-});
+		return this.className.match( /\bet_pb_image_\d\b|\bet_pb_fullwidth_image_\d\b/ );
+	});
 
 	/*
     Divi Button Module Accessibility
@@ -451,8 +451,8 @@ jQuery( document ).ready( function() {
     Retrieve all Divi Post Slider Modules
     */
 	var slider_modules = $( 'div' ).filter( function() {
- return this.className.match( /\bet_pb_slider_\d\b|\bet_pb_fullwidth_slider_\d\b/ ); 
-});
+		return this.className.match( /\bet_pb_slider_\d\b|\bet_pb_fullwidth_slider_\d\b/ );
+	});
 
 
 	/*
@@ -460,16 +460,16 @@ jQuery( document ).ready( function() {
     Retrieve all Divi Post Slider Modules
     */
 	var post_slider_modules = $( 'div' ).filter( function() {
- return this.className.match( /\bet_pb_post_slider_\d\b|\bet_pb_fullwidth_post_slider_\d\b/ ); 
-});
+		return this.className.match( /\bet_pb_post_slider_\d\b|\bet_pb_fullwidth_post_slider_\d\b/ );
+	});
 
 	/*
     Divi Fullwidth Header Module Accessibility
     Retrieve all Divi Fullwidth Header Modules
     */
 	var fullwidth_header_modules = $( 'section' ).filter( function() {
- return this.className.match( /\bet_pb_fullwidth_header_\d\b/ ); 
-});
+		return this.className.match( /\bet_pb_fullwidth_header_\d\b/ );
+	});
 
 
 	/*
@@ -594,7 +594,7 @@ jQuery( document ).ready( function() {
 			'imgs': imgs
 		};
 
-        // calling localized script to get post name image is attached to
+		// calling localized script to get post name image is attached to
 		jQuery.post( accessibleargs.ajaxurl, data, function( response ) {
 			var alts = jQuery.parseJSON( response );
 
@@ -713,8 +713,9 @@ jQuery( document ).ready( function() {
 		main_content_anchors.each( function( index, element ) {
 
 			// Remove all anchors not in the header
-			if ( ! $( $( element ).parent().parent() ).is( 'header' ) )
-				{$(element).remove();}
+			if ( ! $( $( element ).parent().parent() ).is( 'header' ) ) {
+$( element ).remove();
+			}
 
 		});
 	}
@@ -755,6 +756,22 @@ jQuery( document ).ready( function() {
 
 			$( ele ).attr( 'aria-expanded', expanded );
 		}
+	}
+
+	var pricingTable = $( 'div.et_pb_pricing_table_wrap' );
+
+	if ( pricingTable.length ) {
+		
+		//console.log( pricingTable );
+
+		pricingTable.each( function( index, element ) {
+
+			// Grab each more button control
+			var link =  $( element ).find( 'div.et_clickable' );
+
+			link.attr( 'tabIndex', 0 );
+
+		});
 	}
 
 });

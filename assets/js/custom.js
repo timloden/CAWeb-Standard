@@ -554,7 +554,7 @@ jQuery( document ).ready( function() {
 				var t =  $( tab_list[i]);
 
 				// Lowercase the Tab Control Role
-				t.attr( 'role', t.attr( 'role' ).toLowerCase() );
+				//t.attr( 'role', t.attr( 'role' ).toLowerCase() );
 
 				// Grab each tab control
 				var tabs =  $( element ).find( 'a' );
@@ -874,6 +874,10 @@ jQuery( document ).ready( function() {
 	// get divi persons
 	var diviPersons = $( 'div.et_pb_team_member' );
 
+	// get divi tab controls for weird empty link glitch
+	var tab_modules = $( 'div' ).filter( function() {
+		return this.className.match( /\bet_pb_tabs_\d\b/ );
+	});
 
 
 	// find pricing tables and add tabindex to links
@@ -953,6 +957,29 @@ jQuery( document ).ready( function() {
 				$( element ).attr( 'tabIndex', 0 );
 			}
 
+		});
+	}
+
+	if ( tab_modules.length ) {
+		tab_modules.each( function( index, element ) {
+
+			// Grab each tab control list
+			var tab_list =  $( element ).find( 'ul.et_pb_tabs_controls' );
+			var lis = $( tab_list ).find( 'li' );
+
+			tab_list.each( function( i ) {
+				var t =  $( tab_list[i]);
+
+				var tabs =  $( element ).find( 'a' );
+				tabs.each( function( t ) {
+					var tab = $( tabs[t]);
+
+					if( $( tab ).is(':empty') ) {
+						$( this ).hide();
+					}
+					
+				});
+			});
 		});
 	}
 

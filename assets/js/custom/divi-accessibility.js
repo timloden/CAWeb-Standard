@@ -162,7 +162,7 @@ jQuery( document ).ready( function() {
 				var t =  $( tab_list[i]);
 
 				// Lowercase the Tab Control Role
-				t.attr( 'role', t.attr( 'role' ).toLowerCase() );
+				//t.attr( 'role', t.attr( 'role' ).toLowerCase() );
 
 				// Grab each tab control
 				var tabs =  $( element ).find( 'a' );

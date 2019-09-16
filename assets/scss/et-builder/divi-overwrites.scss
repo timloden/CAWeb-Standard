@@ -139,3 +139,18 @@ $default-outline: solid 2px #007bff;
 .et-db #et-boc .et_pb_text_color_dark .mejs-container .mejs-controls .mejs-time span {
     color: #000;
 }
+
+// countdown timer
+
+.et_pb_countdown_timer {
+    &.et_pb_bg_layout_dark {
+        background-color: #046b99;
+    }
+
+    .et_pb_countdown_timer_container {
+
+        .values, .section {
+            background-color: transparent;
+        }
+    }
+}

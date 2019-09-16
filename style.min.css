@@ -6593,6 +6593,8 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .et-db #et-boc .et_pb_frequency,.et-db #et-boc .et_pb_dollar_sign{color:#000}
 .et-db #et-boc .et_pb_pricing_table_button{color:#046b99;border-color:#046b99}
 .et-db #et-boc .et_pb_text_color_dark .mejs-container .mejs-controls .mejs-time span{color:#000}
+.et_pb_countdown_timer.et_pb_bg_layout_dark{background-color:#046b99}
+.et_pb_countdown_timer .et_pb_countdown_timer_container .values,.et_pb_countdown_timer .et_pb_countdown_timer_container .section{background-color:transparent}
 img{height:auto}
 .global-footer .copyright{padding:5px 0}
 .panel-heading .triangle{z-index:99}

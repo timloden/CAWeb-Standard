@@ -12,6 +12,9 @@ jQuery( document ).ready( function() {
 	// get divi circle counters
 	var diviCircleCounters = $( 'div.et_pb_circle_counter' );
 
+	// get divi countdown timers
+	var diviCountdownTimers = $( 'div.et_pb_countdown_timer' );
+
 
 
 	// find pricing tables and add tabindex to links
@@ -53,6 +56,17 @@ jQuery( document ).ready( function() {
 	if ( diviCircleCounters.length ) {
 
 		diviCircleCounters.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
+
+	if ( diviCountdownTimers.length ) {
+
+		diviCountdownTimers.each( function( index, element ) {
 
 			if ( $( element ).hasClass( 'et_clickable' ) ) {
 				$( element ).attr( 'tabIndex', 0 );

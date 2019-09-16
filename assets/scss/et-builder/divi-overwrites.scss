@@ -181,3 +181,19 @@ $default-outline: solid 2px #007bff;
 .et-db #et-boc .et_pb_slider_carousel.et_pb_controls_light+.et_pb_carousel .et_pb_video_play:focus {
     opacity: 1;
 }
+
+// divi text module 
+
+.et-db {
+    #et-boc {
+        .et_pb_text {
+            ul.list-overstated, ul.list-understated, ul.list-standout, ul.list-primary {
+                margin-left: 0;
+
+                li {
+                    list-style: none;
+                }
+            }
+        }
+    }
+}

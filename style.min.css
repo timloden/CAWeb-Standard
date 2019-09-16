@@ -6599,6 +6599,8 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .et-db #et-boc ul.et_pb_member_social_links{margin-top:20px;padding:0;margin-left:0}
 .et-db #et-boc .et_pb_search input.et_pb_searchsubmit{background-color:#333;color:#fff}
 .et-db #et-boc .et_pb_slider_carousel.et_pb_controls_light+.et_pb_carousel .et_pb_video_play:focus{opacity:1}
+.et-db #et-boc .et_pb_text ul.list-overstated,.et-db #et-boc .et_pb_text ul.list-understated,.et-db #et-boc .et_pb_text ul.list-standout,.et-db #et-boc .et_pb_text ul.list-primary{margin-left:0}
+.et-db #et-boc .et_pb_text ul.list-overstated li,.et-db #et-boc .et_pb_text ul.list-understated li,.et-db #et-boc .et_pb_text ul.list-standout li,.et-db #et-boc .et_pb_text ul.list-primary li{list-style:none}
 img{height:auto}
 .global-footer .copyright{padding:5px 0}
 .panel-heading .triangle{z-index:99}

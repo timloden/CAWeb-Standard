@@ -758,22 +758,6 @@ $( element ).remove();
 		}
 	}
 
-	var pricingTable = $( 'div.et_pb_pricing_table_wrap' );
-
-	if ( pricingTable.length ) {
-		
-		//console.log( pricingTable );
-
-		pricingTable.each( function( index, element ) {
-
-			// Grab each more button control
-			var link =  $( element ).find( 'div.et_clickable' );
-
-			link.attr( 'tabIndex', 0 );
-
-		});
-	}
-
 });
 
 // Google Analytics
@@ -866,3 +850,24 @@ if( args.ca_google_trans_enabled ){
   var s = document.getElementsByTagName('script');
   s[s.length - 1].parentNode.insertBefore(gtrans, s[s.length - 1]);
 }
+
+jQuery( document ).ready( function() {
+    
+    var pricingTable = $( 'div.et_pb_pricing_table_wrap' );
+
+	if ( pricingTable.length ) {
+
+		//console.log( pricingTable );
+
+		pricingTable.each( function( index, element ) {
+
+			// Grab each more button control
+			var link =  $( element ).find( 'div.et_clickable' );
+
+			link.attr( 'tabIndex', 0 );
+
+		});
+    }
+    
+    
+});

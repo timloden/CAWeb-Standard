@@ -2,6 +2,11 @@ img {
 	height: auto;
 }
 
+.global-footer .copyright {
+	padding: 5px 0;
+}
+
+
 .panel-heading .triangle {
 	z-index: 99;
 }
@@ -37,10 +42,16 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 	}
 }
 
+// profile banner
+
 .profile-detail {
 	.profile-image {
 		max-width: 150px;
 	}
+}
+
+.profile-banner .inner {
+	background-size: contain !important;
 }
 
 .google-search {

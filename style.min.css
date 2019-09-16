@@ -6576,9 +6576,9 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .et-db #et-boc .et_pb_module a:focus{outline:solid 2px #007bff !important}
 .et-db #et-boc .et_pb_row{margin:0 auto;width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}
 @media(min-width:576px){.et-db #et-boc .et_pb_row{max-width:576px}
-}@media(min-width:768px){.et-db #et-boc .et_pb_row{max-width:768px}
-}@media(min-width:992px){.et-db #et-boc .et_pb_row{max-width:992px}
-}@media(min-width:1200px){.et-db #et-boc .et_pb_row{max-width:1200px}
+}@media(min-width:768px){.et-db #et-boc .et_pb_row{max-width:720px}
+}@media(min-width:992px){.et-db #et-boc .et_pb_row{max-width:960px}
+}@media(min-width:1200px){.et-db #et-boc .et_pb_row{max-width:1280px}
 }.et-db #et-boc .et-fb-modules-list ul li .cacm_card:before{font-family:"CaGov" !important;content:"" !important}
 .et-db #et-boc .et_pb_blog_grid a.more-link,.et-db #et-boc .et_pb_posts a.more-link{display:inline-block;text-transform:capitalize}
 .et-db #et-boc .et_pb_blurb_position_left .et_pb_blurb_content .et_pb_blurb_container .et_pb_module_header{margin-top:0}
@@ -6588,6 +6588,7 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .et-db #et-boc .et_pb_login_0.et_pb_login{background-color:#046b99}
 .et-db #et-boc .et_pb_posts_nav a{background:0;text-decoration:underline !important}
 img{height:auto}
+.global-footer .copyright{padding:5px 0}
 .panel-heading .triangle{z-index:99}
 #wpadminbar #wp-admin-bar-site-name>.ab-item:before{content:"\e600";font-family:'CaGov' !important}
 a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,div,dl,dt,em,fieldset,font,form,html,i,iframe,img,ins,kbd,label,legend,object,pre,q,s,samp,small,span,strike,strong,sub,sup,tt,u,var{margin:0;padding:0;border:0;outline:0;background:0}
@@ -6596,6 +6597,7 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 .publication-list .pub-item:nth-child(odd){background:#fafafa}
 .publication-list .pub-item:nth-child(even){background:#f0f0f0}
 .profile-detail .profile-image{max-width:150px}
+.profile-banner .inner{background-size:contain !important}
 .google-search{background-color:#fff;border-radius:0;border:3px solid transparent;-webkit-transition:border .4s;transition:border .4s;outline:0;padding:5px;font-size:1.1rem;opacity:.8 !important;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;position:relative}
 .google-search .search-box{background:0;border:0;width:100%;font-size:1.1rem;margin-right:10px;background:url(https://www.google.com/cse/static/images/1x/googlelogo_lightgrey_46x16dp.png) left center no-repeat;padding-left:50px}
 .google-search .search-button{background:0;border:0;font-size:30px;padding:0 5px}

@@ -857,7 +857,10 @@ jQuery( document ).ready( function() {
 	var pricingTable = $( 'div.et_pb_pricing_table_wrap' );
 
 	// get divi accordions
-	var DiviAccordions = $( 'div.et_pb_accordion' );
+	var diviAccordions = $( 'div.et_pb_accordion' );
+
+	// get divi CTAs
+	var diviCtas = $( 'div.et_pb_promo' );
 
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
@@ -872,9 +875,9 @@ jQuery( document ).ready( function() {
 		});
 	}
 
-	if ( DiviAccordions.length ) {
+	if ( diviAccordions.length ) {
 
-		DiviAccordions.each( function( index, element ) {
+		diviAccordions.each( function( index, element ) {
 
 			// get main accodrion item
 			var link =  $( element ).find( 'h5.et_pb_toggle_title' );
@@ -884,5 +887,15 @@ jQuery( document ).ready( function() {
 		});
 	}
 
+	if ( diviCtas.length ) {
+
+		diviCtas.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
 
 });

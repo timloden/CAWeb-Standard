@@ -6618,6 +6618,8 @@ a,abbr,acronym,address,applet,b,big,blockquote,body,center,cite,code,dd,del,dfn,
 .clear-search{position:absolute;right:-45px;top:0;cursor:pointer;display:none;font-size:35px;background:0;border:0;padding:0}
 body.active-search .clear-search{display:block}
 body.active-search .search-results-header .clear-search{display:none}
+.et-db #et-boc .et_pb_ca_section_footer .et_pb_ca_section_footer_group ul{padding:0 0 23px 1em;line-height:26px}
+.et-db #et-boc .et_pb_ca_section_footer .et_pb_ca_section_footer_group ul li a{border-bottom:1px solid #000}
 img.alignright{float:right;margin:0 0 1em 1em}
 img.alignleft{float:left;margin:0 1em 1em 0}
 img.aligncenter{display:block;margin-left:auto;margin-right:auto}

@@ -109,6 +109,21 @@ body.active-search {
 	}
 }
 
+// footer section
+.et-db #et-boc {
+	.et_pb_ca_section_footer .et_pb_ca_section_footer_group ul {
+		padding: 0 0 23px 1em;
+		line-height: 26px;
+		
+		li {
+			a {
+				border-bottom: 1px solid #000;
+			}
+		}
+	}
+}
+
+
 
 // WP standard alignment classes
 

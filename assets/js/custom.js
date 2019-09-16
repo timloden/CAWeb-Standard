@@ -868,6 +868,9 @@ jQuery( document ).ready( function() {
 	// get divi countdown timers
 	var diviCountdownTimers = $( 'div.et_pb_countdown_timer' );
 
+	// get divi number counters
+	var diviNumberCounters = $( 'div.et_pb_number_counter' );
+
 
 
 	// find pricing tables and add tabindex to links
@@ -920,6 +923,17 @@ jQuery( document ).ready( function() {
 	if ( diviCountdownTimers.length ) {
 
 		diviCountdownTimers.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
+
+	if ( diviNumberCounters.length ) {
+
+		diviNumberCounters.each( function( index, element ) {
 
 			if ( $( element ).hasClass( 'et_clickable' ) ) {
 				$( element ).attr( 'tabIndex', 0 );

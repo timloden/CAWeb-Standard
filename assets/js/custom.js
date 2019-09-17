@@ -888,6 +888,8 @@ jQuery( document ).ready( function() {
 		return this.className.match( /\bet_pb_tabs_\d\b/ );
 	});
 
+	// get panel modules
+	var cawebPanels = $( 'div.et_pb_ca_panel' );
 
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
@@ -989,6 +991,17 @@ jQuery( document ).ready( function() {
 					
 				});
 			});
+		});
+	}
+
+	if ( cawebPanels.length ) {
+
+		cawebPanels.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
+			}
+
 		});
 	}
 

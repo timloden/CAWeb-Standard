@@ -388,6 +388,13 @@ $( document ).ready( function() {
 	$( 'a[data-toggle="tab"]' ).on( 'shown.bs.tab', function( e ) {
 		window.dispatchEvent( new Event( 'resize' ) );
 	});
+
+	$( 'style' ).each( function( index, element ) {
+		$( element ).removeAttr( 'type', '' );
+	});
+	$( 'script' ).each( function( index, element ) {
+		$( element ).removeAttr( 'type', '' );
+	});
 });
 
 // Last update 8/5/2019 @ 3:20pm
@@ -596,8 +603,10 @@ jQuery( document ).ready( function() {
 
 		// calling localized script to get post name image is attached to
 		jQuery.post( accessibleargs.ajaxurl, data, function( response ) {
+			//$( '.entry-content' ).html( response );
+			console.log(response);
 			var alts = jQuery.parseJSON( response );
-
+			
 			imgs.forEach( function( element, index ) {
 
 				// Grab each img control

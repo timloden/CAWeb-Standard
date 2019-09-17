@@ -117,3 +117,65 @@ if ( ! function_exists('caweb_get_shortcode_from_content')) {
 		return  ! empty($objects) ? $objects[0] : array();
 	}
 }
+
+// CAWeb 1.0 action for getting post meta
+
+add_action('admin_post_caweb_attachment_post_meta', 'caweb_retrieve_attachment_post_meta');
+add_action('admin_post_no_priv_caweb_attachment_post_meta', 'caweb_retrieve_attachment_post_meta');
+function caweb_retrieve_attachment_post_meta() {
+	if ( ! isset($_POST['imgs']) || empty($_POST['imgs']) || ! is_array($_POST['imgs'])) {
+		return 0;
+	}
+
+	$alts = caweb_get_attachment_post_meta($_POST['imgs'], '_wp_attachment_image_alt');
+
+	print json_encode($alts);
+	exit();
+}
+
+function caweb_get_attachment_post_meta($image_url, $meta_key = '') {
+	if (empty($image_url)) {
+		return 0;
+	}
+
+	$query = array(
+		'post_type'  => 'attachment',
+		'fields'     => 'ids',
+	);
+
+	if (is_string($image_url)) {
+		$query['meta_query'] = array(
+			array(
+				'key'     => '_wp_attached_file',
+				'value'   => basename($image_url),
+				'compare' => 'LIKE',
+			),
+		);
+
+		$ids = get_posts($query);
+
+		return ! empty($ids) ? get_post_meta($ids[0], $meta_key, true) : 0;
+	} elseif (is_array($image_url)) {
+		$imgs = array();
+
+		foreach ($image_url as $i => $img) {
+			$query['meta_query'] = array(
+				array(
+					'key'     => '_wp_attached_file',
+					'value'   => basename($img),
+					'compare' => 'LIKE',
+				),
+			);
+
+			$ids = get_posts($query);
+
+			if ( ! empty($ids)) {
+				$imgs[] = get_post_meta($ids[0], $meta_key, true);
+			}
+		}
+
+		return ! empty($imgs) ? $imgs : 0;
+	}
+
+	return 0;
+}

@@ -12,4 +12,11 @@ $( document ).ready( function() {
 	$( 'a[data-toggle="tab"]' ).on( 'shown.bs.tab', function( e ) {
 		window.dispatchEvent( new Event( 'resize' ) );
 	});
+
+	$( 'style' ).each( function( index, element ) {
+		$( element ).removeAttr( 'type', '' );
+	});
+	$( 'script' ).each( function( index, element ) {
+		$( element ).removeAttr( 'type', '' );
+	});
 });

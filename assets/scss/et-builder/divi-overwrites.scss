@@ -197,3 +197,21 @@ $default-outline: solid 2px #007bff;
         }
     }
 }
+
+// divi slider 
+
+.et-db #et-boc .et_pb_slide_content {
+    a {
+        color: #fff;
+
+        &:hover {
+            background-image: linear-gradient(to right, #fff 50%, transparent 50%);
+        }
+    }
+}
+
+.et-db #et-boc .et-pb-arrow-next:hover, .et-db #et-boc .et-pb-arrow-next, .et-db #et-boc .et-pb-arrow-prev, .et-db #et-boc .et-pb-arrow-prev:hover {
+        background-image: none; 
+        color: #c9c9c9
+
+}

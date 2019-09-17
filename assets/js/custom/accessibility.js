@@ -29,6 +29,9 @@ jQuery( document ).ready( function() {
 	// get panel modules
 	var cawebPanels = $( 'div.et_pb_ca_panel' );
 
+	// get media slides with links
+	var cawebMediaSlides = $( 'div.cacm_media_slider_slide' );
+
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
 
@@ -135,6 +138,17 @@ jQuery( document ).ready( function() {
 	if ( cawebPanels.length ) {
 
 		cawebPanels.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
+
+	if ( cawebMediaSlides.length ) {
+
+		cawebMediaSlides.each( function( index, element ) {
 
 			if ( $( element ).hasClass( 'et_clickable' ) ) {
 				$( element ).attr( 'tabIndex', 0 );

@@ -205,7 +205,7 @@ jQuery( document ).ready( function() {
 		// calling localized script to get post name image is attached to
 		jQuery.post( accessibleargs.ajaxurl, data, function( response ) {
 			//$( '.entry-content' ).html( response );
-			console.log(response);
+			//console.log(response);
 			var alts = jQuery.parseJSON( response );
 			
 			imgs.forEach( function( element, index ) {

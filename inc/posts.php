@@ -206,3 +206,26 @@ function custom_types_in_acrhives( $query ) {
         $query->set( 'post_type', $post_types );
     }
 }
+
+//echo attachment_url_to_postid( 'http://example.com/wp-content/uploads/2016/05/castle-old.jpg' );
+
+// register the ajax action for authenticated users
+// add_action('wp_ajax_get_image_title_by_id', 'get_image_title_by_id');
+
+// // register the ajax action for unauthenticated users
+// add_action('wp_ajax_nopriv_get_image_title_by_id', 'get_image_title_by_id');
+
+// // handle the ajax request
+// function get_image_title_by_id() {
+//     $file_path = $_REQUEST['filePath'];
+
+// 	$image_id = attachment_url_to_postid( $file_path );
+
+// 	$image_title = get_the_title($image_id);
+
+//     // in the end, returns success json data
+//     wp_send_json_success([$image_title]);
+
+//     // or, on error, return error json data
+//     wp_send_json_error(['couldnt get the title']);
+// }

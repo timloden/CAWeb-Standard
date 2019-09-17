@@ -184,40 +184,40 @@ jQuery( document ).ready( function() {
 	}
 
 	// Run only if there is a Image Module on the current pageI m
-	if ( image_modules.length ) {
-		var imgs = [];
+	// if ( image_modules.length ) {
+	// 	var imgs = [];
 
-		image_modules.each( function( index, element ) {
+	// 	image_modules.each( function( index, element ) {
 
-			// Grab each img control
-			var img =  $( element ).find( 'img' );
+	// 		// Grab each img control
+	// 		var img =  $( element ).find( 'img' );
 
-			if ( ! img.attr( 'alt' ) ) {
-				imgs[index] = img.attr( 'src' );
-			}
+	// 		if ( ! img.attr( 'alt' ) ) {
+	// 			imgs[index] = img.attr( 'src' );
+	// 		}
 
-		});
-		var data = {
-			'action': 'caweb_attachment_post_meta',
-			'imgs': imgs
-		};
+	// 	});
+	// 	var data = {
+	// 		'action': 'caweb_attachment_post_meta',
+	// 		'imgs': imgs
+	// 	};
 
-		// calling localized script to get post name image is attached to
-		jQuery.post( accessibleargs.ajaxurl, data, function( response ) {
-			//$( '.entry-content' ).html( response );
-			//console.log(response);
-			var alts = jQuery.parseJSON( response );
+	// 	// calling localized script to get post name image is attached to
+	// 	jQuery.post( accessibleargs.ajaxurl, data, function( response ) {
+	// 		//$( '.entry-content' ).html( response );
+	// 		//console.log(response);
+	// 		var alts = jQuery.parseJSON( response );
 			
-			imgs.forEach( function( element, index ) {
+	// 		imgs.forEach( function( element, index ) {
 
-				// Grab each img control
-				var img =  $( image_modules[index]).find( 'img' );
-				img.attr( 'alt', alts[index]);
-			});
+	// 			// Grab each img control
+	// 			var img =  $( image_modules[index]).find( 'img' );
+	// 			img.attr( 'alt', alts[index]);
+	// 		});
 
-		});
+	// 	});
 
-	}
+	// }
 
 	// Run only if there is a Button Module on the current page
 	if ( button_modules.length ) {

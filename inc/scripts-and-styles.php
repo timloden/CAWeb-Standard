@@ -73,14 +73,14 @@ function caweb_scripts()
     endif;
 
     // CAWeb 1.0 Accessibility script
-    wp_register_script('caweb-accessibility-scripts', get_template_directory_uri() . '/assets/js/custom/libs/accessibility.js', ['jquery'], true);
+    // wp_register_script('caweb-accessibility-scripts', get_template_directory_uri() . '/assets/js/custom/libs/accessibility.js', ['jquery'], true);
 
-    wp_localize_script(
-        'caweb-accessibility-scripts', 'accessibleargs',
-        array('ajaxurl' => admin_url('admin-post.php'))
-    );
+    // wp_localize_script(
+    //     'caweb-accessibility-scripts', 'accessibleargs',
+    //     array('ajaxurl' => admin_url('admin-post.php'))
+    // );
                 
-    wp_enqueue_script('caweb-accessibility-scripts');
+    // wp_enqueue_script('caweb-accessibility-scripts');
 
 }
 

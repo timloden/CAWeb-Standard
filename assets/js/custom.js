@@ -324,6 +324,7 @@ function _tagLinks(evObj, evCat, evAct, evLbl, evVal, evNonInter, exisAttr)
 	}
 }
 
+/* eslint-disable vars-on-top */
 jQuery( document ).ready( function() {
 
 	// get pricing tables
@@ -358,7 +359,11 @@ jQuery( document ).ready( function() {
 	// get media slides with links
 	var cawebMediaSlides = $( 'div.cacm_media_slider_slide' );
 
+	// get caweb cards
 	var cawebCards = $( 'div.et_pb_ca_card' );
+
+	// get divi images
+	var diviImages = $( 'div.et_pb_image img' );
 
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
@@ -454,10 +459,10 @@ jQuery( document ).ready( function() {
 				tabs.each( function( t ) {
 					var tab = $( tabs[t]);
 
-					if( $( tab ).is(':empty') ) {
+					if ( $( tab ).is( ':empty' ) ) {
 						$( this ).hide();
 					}
-					
+
 				});
 			});
 		});
@@ -491,6 +496,27 @@ jQuery( document ).ready( function() {
 
 			if ( $( element ).hasClass( 'et_clickable' ) ) {
 				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
+
+	if ( diviImages.length ) {
+
+		diviImages.each( function( index, element ) {
+
+			//console.log( element );
+			if ( '' == element.alt ) {
+
+				// im sure this could be better
+
+				var path = element.src;
+
+				var file = path.replace( /^.*[\\\/]/, '' )
+					.split( '.' ).slice( 0, -1 ).join( '.' )
+					.replace( /-/g, ' ' );
+
+				$( element ).attr( 'alt', file );
 			}
 
 		});
@@ -757,40 +783,40 @@ jQuery( document ).ready( function() {
 	}
 
 	// Run only if there is a Image Module on the current pageI m
-	if ( image_modules.length ) {
-		var imgs = [];
+	// if ( image_modules.length ) {
+	// 	var imgs = [];
 
-		image_modules.each( function( index, element ) {
+	// 	image_modules.each( function( index, element ) {
 
-			// Grab each img control
-			var img =  $( element ).find( 'img' );
+	// 		// Grab each img control
+	// 		var img =  $( element ).find( 'img' );
 
-			if ( ! img.attr( 'alt' ) ) {
-				imgs[index] = img.attr( 'src' );
-			}
+	// 		if ( ! img.attr( 'alt' ) ) {
+	// 			imgs[index] = img.attr( 'src' );
+	// 		}
 
-		});
-		var data = {
-			'action': 'caweb_attachment_post_meta',
-			'imgs': imgs
-		};
+	// 	});
+	// 	var data = {
+	// 		'action': 'caweb_attachment_post_meta',
+	// 		'imgs': imgs
+	// 	};
 
-		// calling localized script to get post name image is attached to
-		jQuery.post( accessibleargs.ajaxurl, data, function( response ) {
-			//$( '.entry-content' ).html( response );
-			//console.log(response);
-			var alts = jQuery.parseJSON( response );
+	// 	// calling localized script to get post name image is attached to
+	// 	jQuery.post( accessibleargs.ajaxurl, data, function( response ) {
+	// 		//$( '.entry-content' ).html( response );
+	// 		//console.log(response);
+	// 		var alts = jQuery.parseJSON( response );
 			
-			imgs.forEach( function( element, index ) {
+	// 		imgs.forEach( function( element, index ) {
 
-				// Grab each img control
-				var img =  $( image_modules[index]).find( 'img' );
-				img.attr( 'alt', alts[index]);
-			});
+	// 			// Grab each img control
+	// 			var img =  $( image_modules[index]).find( 'img' );
+	// 			img.attr( 'alt', alts[index]);
+	// 		});
 
-		});
+	// 	});
 
-	}
+	// }
 
 	// Run only if there is a Button Module on the current page
 	if ( button_modules.length ) {

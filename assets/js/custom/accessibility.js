@@ -1,3 +1,4 @@
+/* eslint-disable vars-on-top */
 jQuery( document ).ready( function() {
 
 	// get pricing tables
@@ -32,7 +33,11 @@ jQuery( document ).ready( function() {
 	// get media slides with links
 	var cawebMediaSlides = $( 'div.cacm_media_slider_slide' );
 
+	// get caweb cards
 	var cawebCards = $( 'div.et_pb_ca_card' );
+
+	// get divi images
+	var diviImages = $( 'div.et_pb_image img' );
 
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
@@ -128,10 +133,10 @@ jQuery( document ).ready( function() {
 				tabs.each( function( t ) {
 					var tab = $( tabs[t]);
 
-					if( $( tab ).is(':empty') ) {
+					if ( $( tab ).is( ':empty' ) ) {
 						$( this ).hide();
 					}
-					
+
 				});
 			});
 		});
@@ -165,6 +170,27 @@ jQuery( document ).ready( function() {
 
 			if ( $( element ).hasClass( 'et_clickable' ) ) {
 				$( element ).attr( 'tabIndex', 0 );
+			}
+
+		});
+	}
+
+	if ( diviImages.length ) {
+
+		diviImages.each( function( index, element ) {
+
+			//console.log( element );
+			if ( '' == element.alt ) {
+
+				// im sure this could be better
+
+				var path = element.src;
+
+				var file = path.replace( /^.*[\\\/]/, '' )
+					.split( '.' ).slice( 0, -1 ).join( '.' )
+					.replace( /-/g, ' ' );
+
+				$( element ).attr( 'alt', file );
 			}
 
 		});

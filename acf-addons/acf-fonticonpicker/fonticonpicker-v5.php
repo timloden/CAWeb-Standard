@@ -20,20 +20,17 @@ class acf_field_fonticonpicker extends acf_field {
 		$this->category = __("jQuery", 'acf');
 
 		//$uri  = sprintf("%s://%s", isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http', $_SERVER['SERVER_NAME']);
+  			
+		parent::__construct();
 
-  			// Settings
+		// Settings
 		$this->settings = array(
-			'dir' 		=>  '/',
-			'path'		=>	'/',
+			'dir' 		=>  get_template_directory_uri() . '/acf-addons/acf-fonticonpicker/',
+			'path'		=>	get_template_directory_uri() . '/acf-addons/acf-fonticonpicker/',
 			'config' 	=> 	get_template_directory_uri() . '/acf-addons/acf-fonticonpicker/icons/config.json',
 			'icons'		=>	get_template_directory_uri() . '/acf-addons/acf-fonticonpicker/icons/css/fontello.css',
 			'version' 	=> 	'1.0.0'
 		);
-
-
-		parent::__construct();
-
-
 
 		// Apply a filter so that you can load icon set from theme
 		$this->settings = apply_filters( 'acf/acf_field_fonticonpicker/settings', $this->settings );
@@ -69,7 +66,7 @@ class acf_field_fonticonpicker extends acf_field {
 	 *  @since	1.0.0
 	 */
 	function render_field( $field ) {
-		//print_r($this->json_content);
+		//print_r($this->settings['dir']);
 		if ( !isset( $this->json_content['glyphs'] ) ){
 			_e('No icons found');
 			return;
@@ -93,17 +90,17 @@ class acf_field_fonticonpicker extends acf_field {
 	 *  @since	1.0.0
 	 */
 	function input_admin_enqueue_scripts() {
-
+	
 		// Scripts
-		wp_register_script( 'acf-fonticonpicker', get_template_directory_uri() . '/acf-addons/acf-fonticonpicker/js/jquery.fonticonpicker.min.js', array('jquery'), $this->settings['version'] );
-		wp_register_script( 'acf-fonticonpicker-input', get_template_directory_uri() . '/acf-addons/acf-fonticonpicker/js/input.js', array('acf-fonticonpicker'), $this->settings['version'] );
+		wp_register_script( 'acf-fonticonpicker', $this->settings['dir'] . 'js/jquery.fonticonpicker.min.js', array('jquery'), $this->settings['version'] );
+		wp_register_script( 'acf-fonticonpicker-input', $this->settings['dir'] . 'js/input.js', array('acf-fonticonpicker'), $this->settings['version'] );
 		wp_enqueue_script( 'acf-fonticonpicker-input' );
-
+		
 		// Styles
-		wp_register_style( 'acf-fonticonpicker-style', get_template_directory_uri() . '/acf-addons/acf-fonticonpicker/css/jquery.fonticonpicker.min.css', false, $this->settings['version'] );
+		wp_register_style( 'acf-fonticonpicker-style', $this->settings['dir'] . 'css/jquery.fonticonpicker.min.css', false, $this->settings['version'] );
 		wp_register_style( 'acf-fonticonpicker-icons', $this->settings['icons'] );
 		wp_enqueue_style( array( 'acf-fonticonpicker-style', 'acf-fonticonpicker-icons' ) );
-
+		
 	}
 
 } // Class acf_field_fonticonpicker

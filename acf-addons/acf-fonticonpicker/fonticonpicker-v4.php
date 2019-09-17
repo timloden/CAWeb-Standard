@@ -23,10 +23,10 @@ class acf_field_fonticonpicker extends acf_field {
 
     	// Settings
 		$this->settings = array(
-			'dir' 		=> 	apply_filters('acf/helpers/get_dir', __FILE__),
-			'path'		=>	apply_filters('acf/helpers/get_path', __FILE__),
-			'config' 	=> 	apply_filters('acf/helpers/get_path', __FILE__) . 'icons/config.json',
-			'icons'		=>	apply_filters('acf/helpers/get_dir', __FILE__) . 'icons/css/fontello.css',
+			'dir' 		=>  plugins_url('', __FILE__) . '/',
+			'path'		=>	plugins_url('', __FILE__) . '/',
+			'config' 	=> 	plugins_url('icons/config.json', __FILE__),
+			'icons'		=>	plugins_url('icons/css/fontello.css', __FILE__),
 			'version' 	=> 	'1.0.0'
 		);
 		

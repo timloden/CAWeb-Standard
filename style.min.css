@@ -6620,6 +6620,7 @@ body.active-search .clear-search{display:block}
 body.active-search .search-results-header .clear-search{display:none}
 .et-db #et-boc .et_pb_ca_section_footer .et_pb_ca_section_footer_group ul{padding:0 0 23px 1em;line-height:26px}
 .et-db #et-boc .et_pb_ca_section_footer .et_pb_ca_section_footer_group ul li a{border-bottom:1px solid #000}
+#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url(assets/img/fancybox_sprite.png)}
 img.alignright{float:right;margin:0 0 1em 1em}
 img.alignleft{float:left;margin:0 1em 1em 0}
 img.aligncenter{display:block;margin-left:auto;margin-right:auto}

@@ -124,6 +124,12 @@ body.active-search {
 }
 
 
+// fancybox 
+
+#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+	background-image: url(assets/img/fancybox_sprite.png);
+}
+
 
 // WP standard alignment classes
 

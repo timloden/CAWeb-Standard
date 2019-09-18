@@ -150,7 +150,7 @@ jQuery( document ).ready( function() {
 		});
 	}
 
-	// Run only if there is a Tab Module on the current page
+	// Run only if there is a Tab Module on the current page - ADDED TO ACCESSIBILITY.JS
 	if ( tab_modules.length ) {
 		tab_modules.each( function( index, element ) {
 

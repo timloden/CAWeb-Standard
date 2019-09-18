@@ -365,6 +365,9 @@ jQuery( document ).ready( function() {
 	// get divi images
 	var diviImages = $( 'div.et_pb_image img' );
 
+	// get caweb accordion items
+	var cawebAccordionItems = $( 'div.cacm_accordion_item' );
+
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
 
@@ -519,6 +522,18 @@ jQuery( document ).ready( function() {
 				$( element ).attr( 'alt', file );
 				//console.log(title);
 			}
+
+		});
+	}
+
+	if ( cawebAccordionItems.length ) {
+
+		cawebAccordionItems.each( function( index, element ) {
+
+			// get main accodrion item
+			var link =  $( element ).find( '.panel-collapse' );
+
+			link.removeAttr( 'tabIndex' );
 
 		});
 	}

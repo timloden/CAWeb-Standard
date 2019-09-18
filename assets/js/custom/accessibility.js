@@ -45,6 +45,8 @@ jQuery( document ).ready( function() {
 	// get caweb accordion list items
 	var cawebAccoridonListItems = $( 'div.cacm_accordion_list ul li' );
 
+	var diviBlurbs = $( 'div.et_pb_blurb_content' );
+
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
 
@@ -223,5 +225,20 @@ jQuery( document ).ready( function() {
 		
 		});
 	}
+
+	if ( diviBlurbs.length ) {
+
+		diviBlurbs.each( function( index, element ) {
+
+			var link =  $( element ).find( 'div.et_pb_main_blurb_image a' );
+
+			if ( $( link.length ) ) {
+				$( link ).attr( 'tabIndex', '-1' );
+				$( link ).attr( 'aria-hidden', 'true' );
+			}
+
+		});
+	}
+
 
 });

@@ -6607,6 +6607,8 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .et-db #et-boc .et-pb-arrow-next{right:22px !important;opacity:1 !important}
 .et-db #et-boc .et-pb-arrow-next:hover,.et-db #et-boc .et-pb-arrow-next,.et-db #et-boc .et-pb-arrow-prev,.et-db #et-boc .et-pb-arrow-prev:hover{background-image:none;color:#c9c9c9}
 .et-db #et-boc .et-pb-slider-arrows .et_pb_gallery_image a:focus{outline-offset:-2px}
+.cacm_content_slider .owl-prev{left:22px;opacity:1}
+.cacm_content_slider .owl-next{right:22px;opacity:1}
 img{height:auto}
 .global-footer .copyright{padding:5px 0}
 .panel-heading .triangle{z-index:99}

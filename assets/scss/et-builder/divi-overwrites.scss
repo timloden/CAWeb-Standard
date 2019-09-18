@@ -230,3 +230,14 @@ $default-outline: solid 2px #007bff;
     outline-offset: -2px;
 }
 
+// caweb content slider 
+
+.cacm_content_slider .owl-prev {
+    left: 22px;
+    opacity: 1;
+}
+
+.cacm_content_slider .owl-next {
+    right: 22px;
+    opacity: 1;
+}

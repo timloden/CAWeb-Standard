@@ -42,6 +42,9 @@ jQuery( document ).ready( function() {
 	// get caweb accordion items
 	var cawebAccordionItems = $( 'div.cacm_accordion_item' );
 
+	// get caweb accordion list items
+	var cawebAccoridonListItems = $( 'div.cacm_accordion_list ul li' );
+
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
 
@@ -209,6 +212,15 @@ jQuery( document ).ready( function() {
 
 			link.removeAttr( 'tabIndex' );
 
+		});
+	}
+
+	if ( cawebAccoridonListItems.length ) {
+
+		cawebAccoridonListItems.each( function( index, element ) {
+
+			$( element ).attr( 'tabIndex', 0 );
+		
 		});
 	}
 

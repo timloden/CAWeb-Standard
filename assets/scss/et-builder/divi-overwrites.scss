@@ -210,6 +210,14 @@ $default-outline: solid 2px #007bff;
     }
 }
 
+.et-db #et-boc .et-pb-arrow-prev {
+    left: 22px !important; opacity: 1 !important;
+}
+
+.et-db #et-boc .et-pb-arrow-next {
+    right: 22px !important; opacity: 1 !important;
+}
+
 .et-db #et-boc .et-pb-arrow-next:hover, .et-db #et-boc .et-pb-arrow-next, .et-db #et-boc .et-pb-arrow-prev, .et-db #et-boc .et-pb-arrow-prev:hover {
         background-image: none; 
         color: #c9c9c9
@@ -218,6 +226,7 @@ $default-outline: solid 2px #007bff;
 
 // divi gallery
 
-.et-db #et-boc .et_pb_gallery_image a:focus {
+.et-db #et-boc .et-pb-slider-arrows .et_pb_gallery_image a:focus {
     outline-offset: -2px;
 }
+

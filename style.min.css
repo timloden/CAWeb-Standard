@@ -6603,8 +6603,10 @@ img.mfp-img{width:auto;max-width:100%;height:auto;display:block;line-height:0;-w
 .et-db #et-boc .et_pb_text ul.list-overstated li,.et-db #et-boc .et_pb_text ul.list-understated li,.et-db #et-boc .et_pb_text ul.list-standout li,.et-db #et-boc .et_pb_text ul.list-primary li{list-style:none}
 .et-db #et-boc .et_pb_slide_content a{color:#fff}
 .et-db #et-boc .et_pb_slide_content a:hover{background-image:-webkit-gradient(linear,left top,right top,color-stop(50%,#fff),color-stop(50%,transparent));background-image:linear-gradient(to right,#fff 50%,transparent 50%)}
+.et-db #et-boc .et-pb-arrow-prev{left:22px !important;opacity:1 !important}
+.et-db #et-boc .et-pb-arrow-next{right:22px !important;opacity:1 !important}
 .et-db #et-boc .et-pb-arrow-next:hover,.et-db #et-boc .et-pb-arrow-next,.et-db #et-boc .et-pb-arrow-prev,.et-db #et-boc .et-pb-arrow-prev:hover{background-image:none;color:#c9c9c9}
-.et-db #et-boc .et_pb_gallery_image a:focus{outline-offset:-2px}
+.et-db #et-boc .et-pb-slider-arrows .et_pb_gallery_image a:focus{outline-offset:-2px}
 img{height:auto}
 .global-footer .copyright{padding:5px 0}
 .panel-heading .triangle{z-index:99}

@@ -371,7 +371,11 @@ jQuery( document ).ready( function() {
 	// get caweb accordion list items
 	var cawebAccoridonListItems = $( 'div.cacm_accordion_list ul li' );
 
+	// get divi blurbs
 	var diviBlurbs = $( 'div.et_pb_blurb_content' );
+
+	// get divi post titles
+	var diviPostTitles = $( 'div.et_pb_post_title' );
 
 	// find pricing tables and add tabindex to links
 	if ( pricingTable.length ) {
@@ -561,6 +565,17 @@ jQuery( document ).ready( function() {
 			if ( $( link.length ) ) {
 				$( link ).attr( 'tabIndex', '-1' );
 				$( link ).attr( 'aria-hidden', 'true' );
+			}
+
+		});
+	}
+
+	if ( diviPostTitles.length ) {
+
+		diviPostTitles.each( function( index, element ) {
+
+			if ( $( element ).hasClass( 'et_clickable' ) ) {
+				$( element ).attr( 'tabIndex', 0 );
 			}
 
 		});

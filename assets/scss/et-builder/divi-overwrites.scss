@@ -215,3 +215,9 @@ $default-outline: solid 2px #007bff;
         color: #c9c9c9
 
 }
+
+// divi gallery
+
+.et-db #et-boc .et_pb_gallery_image a:focus {
+    outline-offset: -2px;
+}

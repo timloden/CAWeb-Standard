@@ -25,9 +25,9 @@ function caweb_styles()
     wp_enqueue_style('caweb-standard', get_stylesheet_uri(), [], '0.0.0');
 
     if ($color_scheme) {
-        wp_enqueue_style($color_scheme . '-theme', get_template_directory_uri() . '/color-schemes/colorscheme-' . $color_scheme . '.min.css', [], '5.0.6', 'all');
+        wp_enqueue_style($color_scheme . '-theme', get_template_directory_uri() . '/color-schemes/colorscheme-' . $color_scheme . '.min.css', [], '5.0.10', 'all');
     } else {
-        wp_enqueue_style('oceanside-theme', get_template_directory_uri() . '/color-schemes/colorscheme-oceanside.min.css', [], '5.0.6', 'all');
+        wp_enqueue_style('oceanside-theme', get_template_directory_uri() . '/color-schemes/colorscheme-oceanside.min.css', [], '5.0.10', 'all');
     }
 
     // custom uploaded stylesheets
@@ -54,7 +54,7 @@ function caweb_scripts()
     $google_settings = get_field('google', 'option');
     $search_engine_id = isset($google_settings['search_engine_id']) ? $google_settings['search_engine_id'] : false;
 
-    wp_enqueue_script('cagov-script', get_template_directory_uri() . '/assets/js/cagov.core.min.js', ['jquery'], '5.0.6', true);
+    wp_enqueue_script('cagov-script', get_template_directory_uri() . '/assets/js/cagov.core.min.js', ['jquery'], '5.0.10', true);
 
     if ($geolocator) {
         wp_enqueue_script('geolocator', get_template_directory_uri() . '/assets/js/custom/libs/geolocator.js', [], '0.0.0', true);

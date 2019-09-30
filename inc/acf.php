@@ -124,7 +124,7 @@ if(function_exists('acf_add_options_page') ) {
         }
 
         if (!is_multisite() ) {
-            remove_submenu_page('caweb-options', 'caweb-multisite-ga');
+            remove_submenu_page('site-options', 'caweb-multisite-ga');
 
         }
     }

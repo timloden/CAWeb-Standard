@@ -22,7 +22,7 @@ function caweb_styles()
         //wp_enqueue_style( 'google-search', 'http://www.google.com/cse/style/look/default.css', [], '1.0.0', 'all' );
     }
 
-    wp_enqueue_style('caweb-standard', get_stylesheet_uri(), [], '0.0.0');
+    wp_enqueue_style('caweb-standard', get_stylesheet_uri(), [], '0.0.5');
 
     if ($color_scheme) {
         wp_enqueue_style($color_scheme . '-theme', get_template_directory_uri() . '/color-schemes/colorscheme-' . $color_scheme . '.min.css', [], '5.0.10', 'all');
@@ -33,7 +33,7 @@ function caweb_styles()
     // custom uploaded stylesheets
     if(have_rows('upload_css', 'options') ) :
         while( have_rows('upload_css', 'option') ): the_row();
-            wp_enqueue_style('custom-stylesheet-' . get_row_index(), get_sub_field('stylesheets'), [], '0.0.0', 'all');
+            wp_enqueue_style('custom-stylesheet-' . get_row_index(), get_sub_field('stylesheets'), [], '0.0.5', 'all');
         endwhile;
     endif;
 
@@ -57,18 +57,18 @@ function caweb_scripts()
     wp_enqueue_script('cagov-script', get_template_directory_uri() . '/assets/js/cagov.core.min.js', ['jquery'], '5.0.10', true);
 
     if ($geolocator) {
-        wp_enqueue_script('geolocator', get_template_directory_uri() . '/assets/js/custom/libs/geolocator.js', [], '0.0.0', true);
+        wp_enqueue_script('geolocator', get_template_directory_uri() . '/assets/js/custom/libs/geolocator.js', [], '0.0.5', true);
     }
 
-    wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/assets/js/custom.min.js', ['jquery'], '0.0.0', true);
+    wp_enqueue_script('custom-scripts', get_template_directory_uri() . '/assets/js/custom.min.js', ['jquery'], '0.0.5', true);
 
     // not needed unless we add some 3rd party scripts
     
     //wp_enqueue_script( 'vendor-scripts', get_template_directory_uri() . '/assets/js/vendor.min.js', ['jquery'], '0.0.0', true );
 
-    if ( have_rows('upload_javascript', 'options') ) :
+    if (have_rows('upload_javascript', 'options') ) :
         while( have_rows('upload_javascript', 'option') ): the_row();
-            wp_enqueue_script('custom-js-' . get_row_index(), get_sub_field('javascript_files'), ['jquery'], '0.0.0', true);
+            wp_enqueue_script('custom-js-' . get_row_index(), get_sub_field('javascript_files'), ['jquery'], '0.0.5', true);
         endwhile;
     endif;
 
@@ -95,11 +95,11 @@ function add_block_editor_assets()
 
     wp_enqueue_style('caweb-standard', get_stylesheet_uri(), [], '0.0.0');
 
-    wp_enqueue_style('block-editor', get_template_directory_uri() . '/blocks/block-editor.css', [], '0.0.0', 'all');
+    wp_enqueue_style('block-editor', get_template_directory_uri() . '/blocks/block-editor.css', [], '0.0.5', 'all');
 
     if ($color_scheme) {
-        wp_enqueue_style($color_scheme . '-theme', get_template_directory_uri() . '/color-schemes/colorscheme-' . $color_scheme . '.min.css', [], '5.0.6', 'all');
+        wp_enqueue_style($color_scheme . '-theme', get_template_directory_uri() . '/color-schemes/colorscheme-' . $color_scheme . '.min.css', [], '5.0.10', 'all');
     } else {
-        wp_enqueue_style('oceanside-theme', get_template_directory_uri() . '/color-schemes/colorscheme-oceanside.min.css', [], '5.0.6', 'all');
+        wp_enqueue_style('oceanside-theme', get_template_directory_uri() . '/color-schemes/colorscheme-oceanside.min.css', [], '5.0.10', 'all');
     }
 }
